@@ -1,0 +1,33 @@
+{
+  "date": "2026-04-09",
+  "title": "Links for Apr 9, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://theamericanscholar.org/the-importance-of-being-idle/",
+          "title": "The Importance of Being Idle - The American Scholar"
+        }
+      ]
+    },
+    {
+      "note": "\"5. A big win from using AI agents is tackling stuff that you wouldn\u2019t have before. A senior engineer at 37signals ran a \u201cP1 optimization\u201d project to improve the fastest 1% of requests. They optimized the P1 from being at 4 milliseconds, to under half a millisecond. This is the sort of work that wouldn\u2019t have been considered previously!\u201d\n\n100%, I usually have an \u201ceng excellence\u201d task going in the background while I focus on feature work. Lets me continuously try out new ideas, deliver improvements, clean up code, etc",
+      "links": [
+        {
+          "href": "https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code",
+          "title": "DHH\u2019s new way of writing code"
+        }
+      ]
+    },
+    {
+      "note": "Inference has ties to the Harness engineering as well - can have clever tricks like fine-tune the LLM to plan tool calls in parallel, which ofc relies on your harness supporting that capability\n(that said I\u2019m a little tired of all the Foo Engineering catchphrases, we can just call it platform & infra eng with a focus on LLMs lol)",
+      "links": [
+        {
+          "href": "https://newsletter.pragmaticengineer.com/p/what-is-inference-engineering",
+          "title": "What is inference engineering? Deepdive"
+        }
+      ]
+    }
+  ]
+}

@@ -1,77 +1,60 @@
 # GGulati.com
 
-Static personal website for technical articles.
+Static personal website for technical articles, daily reading links, and side projects. The source is Astro, and the deployable site is plain static HTML/CSS/JS in `dist/`.
 
 ## Architecture
 
-The site is intentionally simple: plain HTML, one shared CSS file, one shared JavaScript component file, and local assets. There is no build step and no package manager requirement.
-
 ```text
 .
-|-- index.html
-|-- about.html
-|-- components.js
-|-- styles.css
-|-- articles/
-`-- assets/
+|-- src/
+|   |-- components/        Shared Astro components
+|   |-- content/
+|   |   |-- articles/      Markdown articles by year
+|   |   |-- links/         Daily reading JSON posts
+|   |   `-- side-projects.json
+|   |-- layouts/           Shared page shell
+|   |-- lib/               Content loaders
+|   |-- pages/             Static and dynamic routes
+|   |-- styles/            Global CSS
+|   `-- widgets/           Article widget renderers
+|-- public/assets/         Static assets copied into the built site
+|-- scripts/deploy-ftp.ts  Manual FTP upload of dist/
+`-- dist/                  Build output, ignored by git
 ```
 
-## Pages
+Astro is used only as a build step. There is no backend requirement for hosting.
 
-- `index.html`: homepage with intro copy, dynamic article previews, side projects, and a links section.
-- `about.html`: professional summary based on `assets/resume.pdf`.
-- `articles/*.html`: individual long-form article pages.
+## Routes
 
-## Shared Components
+- `/index.html`: homepage with article previews, side projects, and the three most recent daily reading posts.
+- `/about.html`: standalone About page.
+- `/links.html`: static archive of all daily reading posts.
+- `/articles/YYYY/slug.html`: long-form articles.
+- `/links/YYYY/MM-DD.html`: daily reading posts.
 
-Reusable UI lives in `components.js`.
+## Content
 
-`<site-header>` renders the shared header. `<site-footer>` renders the shared footer. Use `root="../"` when rendering either component from pages inside `articles/`.
+Add articles as Markdown files under `src/content/articles/YYYY/`. Article previews and sidebars are derived from frontmatter dynamically.
 
-`ARTICLES` is the source of truth for article metadata:
+Add daily reading posts as JSON files under `src/content/links/`. The legacy link export was used for the initial bootstrap only; normal builds do not read or regenerate from it.
 
-- `slug`
-- `title`
-- `date`
-- `href`
-- `excerpt`
+Article-specific demos use explicit widget slots in Markdown, with the implementation kept in `src/widgets/ArticleWidgets.astro`.
 
-`<article-index>` renders the homepage article previews dynamically from `ARTICLES`.
+## Commands
 
-`<article-sidebar current="...">` renders the "More Articles" sidebar on article pages, excluding the current article by slug.
+```bash
+npm install
+npm run dev
+npm run build
+```
 
-## Styling
+On a Windows machine, use `cmd /c npm run build` from PowerShell.
 
-All styling lives in `styles.css`.
+## Deployment
 
-Key layout areas:
+1. Copy `.deploy.env.example` to `.deploy.env`.
+2. Fill in FTP credentials and remote directory.
+3. Run `npm run build`.
+4. Run `npm run deploy`.
 
-- Header and footer
-- Homepage article previews
-- Side projects section
-- Links section
-- About page grid
-- Article layout and sidebar
-- Article body typography
-
-## Content Workflow
-
-To add a new article:
-
-1. Create `articles/new-article-slug.html`.
-2. Use the existing article page structure:
-   - shared header
-   - `<main class="article-shell">`
-   - `<div class="article-layout">`
-   - `<article class="article-content">`
-   - `<article-sidebar current="new-article-slug"></article-sidebar>`
-   - `<site-footer root="../"></site-footer>`
-   - `<script src="../components.js" defer></script>`
-3. Add the article metadata to `ARTICLES` in `components.js`.
-4. Put any local images under `assets/`.
-
-The homepage will pick up the new article automatically from `components.js`.
-
-## Running Locally
-
-Open `index.html` directly in a browser. No dev server is required.
+`.deploy.env` is gitignored. The deploy script uploads `dist/` and requires `FTP_CLEAR_REMOTE=true` so replacing the remote directory is explicit.

@@ -1,0 +1,103 @@
+{
+  "date": "2026-04-07",
+  "title": "Links for Apr 7, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://sam-burns.com/posts/concrete-laptop-stand/",
+          "title": "Concrete Laptop Stand"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47673360",
+          "title": "Show HN: Brutalist Concrete Laptop Stand (2024) | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://xd009642.github.io/2026/04/01/My-Experience-as-a-Rice-Farmer.html",
+          "title": "My Experience As A Rice Farmer"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47614528",
+          "title": "My Experience as a Rice Farmer | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/",
+          "title": "Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.hollywoodreporter.com/business/digital/youtube-worlds-largest-media-company-2025-tops-disney-1236525130/",
+          "title": "YouTube Now Worlds Largest Media Company, Topping Disney"
+        }
+      ]
+    },
+    {
+      "note": "see also: today\u2019s Stratechery",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+          "title": "Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute"
+        }
+      ]
+    },
+    {
+      "note": "also this; about halfway through and it\u2019s interesting wrt what are the specific bottlenecks for scaling AI\n\nStratechery also cites him (Dylan Patel, SemiAnalysis)",
+      "links": [
+        {
+          "href": "https://www.youtube.com/watch?v=mDG_Hx3BSUE",
+          "title": "https://www.youtube.com/watch?v=mDG_Hx3BSUE"
+        },
+        {
+          "href": "https://newsletter.semianalysis.com/p/google-gemini-eats-the-world-gemini",
+          "title": "Google Gemini Eats The World \u2013 Gemini Smashes GPT-4 By 5X, The GPU-Poors"
+        }
+      ]
+    },
+    {
+      "note": "\u201cAmazon in talks to buy $9bn satellite group Globalstar in bid to rival Elon Musk\u2019s Starlink\u201d",
+      "links": [
+        {
+          "href": "https://archive.is/EsigC",
+          "title": "https://archive.is/EsigC"
+        }
+      ]
+    },
+    {
+      "note": "\u201cOpenAI\u2019s ChatGPT App Store Took Aim at Apple, But Results Lag So Far\u201d",
+      "links": [
+        {
+          "href": "https://archive.is/Cqlqt",
+          "title": "https://archive.is/Cqlqt"
+        }
+      ]
+    },
+    {
+      "note": "Mix of marketing hype and interesting claims; note that a GPT model version announcement is rumored later this week",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/glasswing",
+          "title": "Project Glasswing: Securing critical software for the AI era"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47679121",
+          "title": "Project Glasswing: Securing critical software for the AI era | Hacker News"
+        }
+      ]
+    }
+  ]
+}

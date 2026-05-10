@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Roll Through the Ages",
+    "date": "2026-03-01",
+    "displayDate": "Mar 1, 2026",
+    "website": "https://ggulati.github.io/RollThroughAges/",
+    "source": "https://github.com/GGulati/RollThroughAges",
+    "description": "A browser implementation of the dice-based civilization board game with a minimax AI, built in a weekend.",
+    "articles": []
+  },
+  {
+    "title": "Index Funds",
+    "date": "2025-02-09",
+    "displayDate": "Feb 9, 2025",
+    "website": "https://index-funds.vercel.app/",
+    "source": "https://github.com/GGulati/IndexFunds",
+    "description": "Explore international index funds, market returns, and currency exposure through a small research app.",
+    "articles": [
+      {
+        "label": "Article",
+        "href": "/articles/2025/using-cursorai-to-start-your-own-hedge-fund.html"
+      },
+      {
+        "label": "Build notes",
+        "href": "/articles/2025/cursorai-for-frontend-dev-first-impressions.html"
+      }
+    ]
+  }
+]

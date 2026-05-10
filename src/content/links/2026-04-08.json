@@ -1,0 +1,120 @@
+{
+  "date": "2026-04-08",
+  "title": "Links for Apr 8, 2026",
+  "groups": [
+    {
+      "note": "\u201cGLM-5.1: Towards Long-Horizon Tasks\u201d",
+      "links": [
+        {
+          "href": "https://z.ai/blog/glm-5.1",
+          "title": "https://z.ai/blog/glm-5.1"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47677853",
+          "title": "GLM-5.1: Towards Long-Horizon Tasks | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.cloudflare.com/post-quantum-roadmap/",
+          "title": "Cloudflare targets 2029 for full post-quantum security"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47675625",
+          "title": "Cloudflare targets 2029 for full post-quantum security | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://nehanarula.org/2026/04/03/bitcoin-and-quantum-computing.html",
+          "title": "Neha's Writings"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47681274",
+          "title": "Bitcoin and quantum computing | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://gizmodo.com/waymo-has-stopped-testing-its-robotaxis-in-new-york-city-and-no-one-knows-what-happens-next-2000743053",
+          "title": "Waymo Has Stopped Testing Its Robotaxis in New York City and No One Knows What Happens Next"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.cloudflare.com/post-quantum-roadmap/",
+          "title": "Cloudflare targets 2029 for full post-quantum security"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47675625",
+          "title": "Cloudflare targets 2029 for full post-quantum security | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://nehanarula.org/2026/04/03/bitcoin-and-quantum-computing.html",
+          "title": "Neha's Writings"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47681274",
+          "title": "Bitcoin and quantum computing | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://gizmodo.com/waymo-has-stopped-testing-its-robotaxis-in-new-york-city-and-no-one-knows-what-happens-next-2000743053",
+          "title": "Waymo Has Stopped Testing Its Robotaxis in New York City and No One Knows What Happens Next"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://newsletter.semianalysis.com/p/the-great-gpu-shortage-rental-capacity",
+          "title": "The Great GPU Shortage \u2013 Rental Capacity \u2013 Launching our H100 1 Year Rental Price Index"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "title": "Introducing Muse Spark: Scaling Towards Personal Superintelligence"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47692043",
+          "title": "Muse Spark: Scaling towards personal superintelligence | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "We\u2019ll get there tho, you can see e.g. Anthropic is working on the building blocks with subagents + coordination mechanisms, plan mode, Claude Code for the Web (containerized execution) - I would expect within 3 - 6m at most we\u2019ll see full workflow / team orchestration as a product release from them\n\nDitto for Codex\n\nMVP version might not be there tho even with strong eng teams, might need another model bump or two, or more \u201charness engineering\u201d and thoughtful human in the loop. Maybe end of this year / early next Tough to really say given exponentials\n\nHere you go",
+      "links": [
+        {
+          "href": "https://claude.com/blog/claude-managed-agents",
+          "title": "Claude Managed Agents: get to production 10x faster | Claude"
+        }
+      ]
+    }
+  ]
+}

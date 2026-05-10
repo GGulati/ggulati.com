@@ -1,0 +1,28 @@
+{
+  "date": "2026-03-23",
+  "title": "Links for Mar 23, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://skylarbpayne.com/posts/dspy-engineering-patterns/",
+          "title": "If DSPy is So Great, Why Isn"
+        }
+      ]
+    },
+    {
+      "note": "Comments better than article",
+      "links": [
+        {
+          "href": "https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother/",
+          "title": "How I Built an AI Receptionist for a Luxury Mechanic Shop - Part 1"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47487536",
+          "title": "I built an AI receptionist for a mechanic shop | Hacker News"
+        }
+      ]
+    }
+  ]
+}

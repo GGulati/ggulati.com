@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getLinkPosts } from "../../../lib/links.js";
+import { relativeUrl } from "../../../lib/urls.js";
+
+export async function getStaticPaths() {
+  const posts = await getLinkPosts();
+  return posts.map((post) => {
+    const [, month, day] = post.datetime.split("-");
+    return {
+      params: {
+        year: String(post.date.getUTCFullYear()),
+        monthDay: `${month}-${day}`,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const currentPath = post.url;
+---
+
+<BaseLayout title={`${post.title} | Gurwinder Gulati`}>
+  <main id="top" class="link-page-shell">
+    <article class="link-page-content">
+      <a class="back-link" href={relativeUrl(currentPath, "/links.html")}>Back to links</a>
+      <p class="eyebrow">Links</p>
+      <h1>{post.title}</h1>
+      <ol class="daily-link-list">
+        {
+          post.groups.map((group) => (
+            <li>
+              <div class="daily-link-group">
+                {group.links.map((link) => <a href={link.href}>"{link.title}"</a>)}
+              </div>
+              {group.note && <p>{group.note}</p>}
+            </li>
+          ))
+        }
+      </ol>
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,69 @@
+{
+  "date": "2026-04-28",
+  "title": "Links for Apr 28, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://dan.bjorkegren.com/blog/2026/04/the-intelligence-is-plenty-but-the-workers-are-few/",
+          "title": "The intelligence is plenty but the workers are few"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://buttondown.com/hillelwayne/archive/illegal-vs-unwanted-states/",
+          "title": "Illegal vs Unwanted States"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://lethain.com/early-late-stage-hypergrowth/",
+          "title": "Early and late-stage hypergrowth."
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://lethain.com/agents-as-scaffolding/",
+          "title": "Agents as scaffolding for recurring tasks."
+        }
+      ]
+    },
+    {
+      "note": "\"With large gains in life expectancy, the population share of disability due to cognitive decline and dementia has substantially increased. Many older adults in the United States leave the workforce well before age 65. Correlational evidence suggests that leaving the workforce before retirement age could accelerate the pace of cognitive decline. We offer causal evidence, using HRS data for the United States, exploiting plausibly exogenous shifts in labor demand in local labor markets as a Bartik instrument for employment variation across these markets. We find substantial declines over time in cognitive scores stemming from negative labor demand shocks. These findings are concentrated among men aged 51 to 64, whose employment decisions and outcomes may be more sensitive to local labor market conditions than are these decisions or outcomes for women or for older men. Our evidence extends past work focusing narrowly on the retirement age window and provides further support to the notion that working to older ages may delay age-related cognitive decline.\"",
+      "links": [
+        {
+          "href": "https://www.nber.org/papers/w35117",
+          "title": "Does Employment Slow Cognitive Decline? Evidence from Labor Market Shocks"
+        }
+      ]
+    },
+    {
+      "note": "Big step for OpenAI to compete for corporate contracts (wrt regulations, easier procurement, etc)",
+      "links": [
+        {
+          "href": "https://openai.com/index/openai-on-aws/",
+          "title": "OpenAI models, Codex, and Managed Agents come to AWS"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/",
+          "title": "An Interview with OpenAI CEO Sam Altman and AWS CEO Matt Garman About Bedrock Managed Agents"
+        }
+      ]
+    }
+  ]
+}

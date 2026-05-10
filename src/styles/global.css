@@ -180,6 +180,16 @@ h2 {
   line-height: 1.12;
 }
 
+.article-preview h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.article-preview h2 a:hover,
+.article-preview h2 a:focus-visible {
+  color: var(--accent-strong);
+}
+
 .article-preview p {
   max-width: 780px;
   color: var(--muted);
@@ -215,10 +225,29 @@ h2 {
   background: var(--surface);
 }
 
+.demo-card time {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .demo-card h3 {
   margin-bottom: 10px;
   font-size: clamp(1.45rem, 3vw, 2.2rem);
   line-height: 1.1;
+}
+
+.demo-card h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.demo-card h3 a:hover,
+.demo-card h3 a:focus-visible {
+  color: var(--accent-strong);
 }
 
 .demo-card p {
@@ -250,6 +279,22 @@ h2 {
   color: var(--ink);
 }
 
+.demo-card h3 a {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--ink);
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.demo-card h3 a:hover,
+.demo-card h3 a:focus-visible {
+  color: var(--accent-strong);
+}
+
 .links-section {
   padding-top: 12px;
 }
@@ -263,28 +308,166 @@ h2 {
   font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
-.links-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  max-width: 1040px;
-}
-
-.links-list a {
-  min-height: 76px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  color: var(--accent-strong);
-  font-weight: 800;
+.section-label h2 a {
+  color: var(--ink);
   text-decoration: none;
 }
 
-.links-list a:hover,
-.links-list a:focus-visible {
-  border-color: var(--accent);
+.section-label h2 a:hover,
+.section-label h2 a:focus-visible {
+  color: var(--accent-strong);
+}
+
+.link-post-list {
+  display: grid;
+  gap: 18px;
+  max-width: 1040px;
+}
+
+.link-date-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  max-width: 1040px;
+  margin-bottom: 18px;
+}
+
+.link-date-picker label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.link-date-picker select {
+  min-height: 40px;
+  padding: 8px 34px 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
   color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.link-post {
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.link-post h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.1;
+}
+
+.link-post p {
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.link-post-items {
+  margin-top: 20px;
+  padding-left: 22px;
+}
+
+.link-post-items li + li {
+  margin-top: 12px;
+}
+
+.link-post-items a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.link-post-items p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.link-post-items a:hover,
+.link-post-items a:focus-visible {
+  color: var(--ink);
+}
+
+.continue-link {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--accent-strong);
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+}
+
+.link-page-shell {
+  padding: clamp(36px, 6vw, 74px) clamp(18px, 4vw, 56px);
+}
+
+.link-page-content {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 54px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.link-page-content .back-link {
+  display: inline-flex;
+  margin-bottom: 26px;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.link-page-content h1 {
+  margin-bottom: 30px;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+}
+
+.daily-link-list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.daily-link-list li {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.daily-link-list li:last-child {
+  border-bottom: 0;
+}
+
+.daily-link-list a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.daily-link-group {
+  display: grid;
+  gap: 6px;
+}
+
+.daily-link-list p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.all-links-shell {
+  min-height: calc(100vh - 75px);
+}
+
+.all-links-section {
+  padding-top: 18px;
+}
+
+.load-sentinel {
+  min-height: 1px;
 }
 
 .site-footer {
@@ -676,10 +859,6 @@ h2 {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .links-list {
     grid-template-columns: 1fr;
   }
 

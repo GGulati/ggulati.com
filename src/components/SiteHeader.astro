@@ -1,0 +1,21 @@
+---
+import { relativeUrl } from "../lib/urls.js";
+
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href={relativeUrl(currentPath, "/index.html")} aria-label="Gurwinder Gulati home">
+    <span class="brand-mark">GG</span>
+    <span>
+      <strong>Gurwinder Gulati</strong>
+      <small>Coding, fast and slow</small>
+    </span>
+  </a>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <a href={relativeUrl(currentPath, "/index.html#articles")}>Articles</a>
+    <a href={relativeUrl(currentPath, "/index.html#side-projects")}>Side Projects</a>
+    <a href={relativeUrl(currentPath, "/links.html")}>Links</a>
+    <a href={relativeUrl(currentPath, "/about.html")}>About</a>
+  </nav>
+</header>

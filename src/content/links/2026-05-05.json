@@ -1,0 +1,63 @@
+{
+  "date": "2026-05-05",
+  "title": "Links for May 5, 2026",
+  "groups": [
+    {
+      "note": "related to the main discussion here",
+      "links": [
+        {
+          "href": "https://www.thediff.co/archive/dead-airlines/",
+          "title": "Dead Airlines"
+        },
+        {
+          "href": "https://davidoks.blog/p/why-airlines-are-always-going-bankrupt",
+          "title": "Why airlines are always going bankrupt"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html",
+          "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.reuters.com/world/asia-pacific/china-blocks-foreign-acquisition-ai-startup-manus-2026-04-27/",
+          "title": "https://www.reuters.com/world/asia-pacific/china-blocks-foreign-acquisition-ai-startup-manus-2026-04-27/"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/news/finance-agents",
+          "title": "Agents for financial services"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48023533",
+          "title": "Agents for financial services and insurance | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
+          "title": "Accelerating Gemma 4: faster inference with multi-token prediction drafters"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48024540",
+          "title": "Accelerating Gemma 4: faster inference with multi-token prediction drafters | Hacker News"
+        }
+      ]
+    }
+  ]
+}

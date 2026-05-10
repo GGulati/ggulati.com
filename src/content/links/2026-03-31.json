@@ -1,0 +1,46 @@
+{
+  "date": "2026-03-31",
+  "title": "Links for Mar 31, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.estragon.news/mr-chatterbox-or-the-modern-prometheus/",
+          "title": "Mr. Chatterbox, or, The Modern Prometheus"
+        }
+      ]
+    },
+    {
+      "note": "He used  for orchestration",
+      "links": [
+        {
+          "href": "https://github.com/instructkr/clawd-code",
+          "title": "GitHub - ultraworkers/claw-code: The repo is finally unlocked. enjoy the party! The fastest repo in history to surpass 100K stars \u2b50. Join Discord: https://discord.gg/5TUQKqFWd Built in Rust using oh-my-codex."
+        },
+        {
+          "href": "https://github.com/Yeachan-Heo/oh-my-codex",
+          "title": "GitHub - Yeachan-Heo/oh-my-codex: OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much more."
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://about.roblox.com/newsroom/2026/02/accelerating-creation-powered-roblox-cube-foundation-model",
+          "title": "Accelerating Creation, Powered by Roblox\u2019s Cube Foundation Model | Roblox"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.apollo.com/insights-news/insights/2026/03/balance-sheet-behind-the-ai-revolution",
+          "title": "The Balance Sheet Behind the AI Revolution"
+        }
+      ]
+    }
+  ]
+}

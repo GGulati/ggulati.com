@@ -1,0 +1,23 @@
+---
+import projects from "../content/side-projects.json";
+import { relativeUrl } from "../lib/urls.js";
+
+const { currentPath } = Astro.props;
+---
+
+<div class="demo-list">
+  {
+    projects.map((project) => (
+      <article class="demo-card">
+        <time datetime={project.date}>{project.displayDate}</time>
+        <h3><a href={project.website}>{project.title}</a></h3>
+        <p>{project.description}</p>
+        <div>
+          <a href={project.website}>Website</a>
+          <a href={project.source}>Source</a>
+          {project.articles.map((article) => <a href={relativeUrl(currentPath, article.href)}>{article.label}</a>)}
+        </div>
+      </article>
+    ))
+  }
+</div>

@@ -1,0 +1,85 @@
+---
+const { widgets = [] } = Astro.props;
+const needsRateReturn = widgets.includes("rate-return");
+---
+
+{
+  needsRateReturn && (
+    <script is:inline>
+      function renderRateReturnWidget(slot) {
+        slot.innerHTML = `
+          <section class="return-widget" aria-labelledby="return-widget-heading">
+            <div class="return-widget-header">
+              <div>
+                <p class="eyebrow">Interactive napkin math</p>
+                <h2 id="return-widget-heading">WIG vs S&amp;P 500 annualized return</h2>
+              </div>
+              <p>Adjust the exchange rates to see how much PLN depreciation changes the WIG comparison for a USD investor.</p>
+            </div>
+            <div class="return-widget-grid">
+              <div class="return-chart" aria-label="Annualized return comparison">
+                <div class="return-bar"><span data-output="wigNominalBar"></span><strong>WIG nominal</strong><output data-output="wigNominalOut">13.9%</output></div>
+                <div class="return-bar"><span data-output="wigUsdBar"></span><strong>WIG USD-adjusted</strong><output data-output="wigUsdOut">10.3%</output></div>
+                <div class="return-bar"><span data-output="spBar"></span><strong>S&amp;P 500</strong><output data-output="spOut">10.8%</output></div>
+              </div>
+              <div class="return-controls">
+                <label>Years held<input data-input="years" type="range" min="1" max="80" step="1" value="34" /><output data-output="yearsValue">34</output></label>
+                <label>WIG multiple<input data-input="wigMultiple" type="range" min="1" max="200" step="1" value="92" /><output data-output="wigMultipleValue">92x</output></label>
+                <label>S&amp;P multiple<input data-input="spMultiple" type="range" min="1" max="100" step="1" value="32" /><output data-output="spMultipleValue">32x</output></label>
+                <label>USD/PLN start<input data-input="fxStart" type="range" min="0.1" max="10" step="0.05" value="1.2" /><output data-output="fxStartValue">1.20</output></label>
+                <label>USD/PLN end<input data-input="fxEnd" type="range" min="0.1" max="10" step="0.05" value="4.05" /><output data-output="fxEndValue">4.05</output></label>
+              </div>
+            </div>
+            <p class="return-widget-note">USD-adjusted WIG multiple: <strong data-output="wigUsdMultipleOut">27.3x</strong></p>
+          </section>
+        `;
+
+        const input = (name) => slot.querySelector(`[data-input="${name}"]`);
+        const output = (name) => slot.querySelector(`[data-output="${name}"]`);
+        const inputs = {
+          years: input("years"),
+          wigMultiple: input("wigMultiple"),
+          spMultiple: input("spMultiple"),
+          fxStart: input("fxStart"),
+          fxEnd: input("fxEnd"),
+        };
+
+        function annualizedReturn(multiple, years) {
+          return Math.pow(multiple, 1 / years) - 1;
+        }
+
+        function update() {
+          const years = Number(inputs.years.value);
+          const wigMultiple = Number(inputs.wigMultiple.value);
+          const spMultiple = Number(inputs.spMultiple.value);
+          const fxStart = Number(inputs.fxStart.value);
+          const fxEnd = Number(inputs.fxEnd.value);
+          const wigUsdMultiple = wigMultiple * (fxStart / fxEnd);
+          const returns = {
+            wigNominal: annualizedReturn(wigMultiple, years),
+            wigUsd: annualizedReturn(wigUsdMultiple, years),
+            sp: annualizedReturn(spMultiple, years),
+          };
+          const maxReturn = Math.max(returns.wigNominal, returns.wigUsd, returns.sp, 0.01);
+          output("wigNominalOut").textContent = `${(returns.wigNominal * 100).toFixed(1)}%`;
+          output("wigUsdOut").textContent = `${(returns.wigUsd * 100).toFixed(1)}%`;
+          output("spOut").textContent = `${(returns.sp * 100).toFixed(1)}%`;
+          output("wigUsdMultipleOut").textContent = `${wigUsdMultiple.toFixed(1)}x`;
+          output("yearsValue").textContent = years.toFixed(0);
+          output("wigMultipleValue").textContent = `${wigMultiple.toFixed(0)}x`;
+          output("spMultipleValue").textContent = `${spMultiple.toFixed(0)}x`;
+          output("fxStartValue").textContent = fxStart.toFixed(2);
+          output("fxEndValue").textContent = fxEnd.toFixed(2);
+          output("wigNominalBar").style.width = `${(returns.wigNominal / maxReturn) * 100}%`;
+          output("wigUsdBar").style.width = `${(returns.wigUsd / maxReturn) * 100}%`;
+          output("spBar").style.width = `${(returns.sp / maxReturn) * 100}%`;
+        }
+
+        Object.values(inputs).forEach((field) => field.addEventListener("input", update));
+        update();
+      }
+
+      document.querySelectorAll('[data-widget="rate-return"]').forEach(renderRateReturnWidget);
+    </script>
+  )
+}

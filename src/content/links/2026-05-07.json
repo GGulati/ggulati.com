@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-07",
+  "title": "Links for May 7, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.economicforces.xyz/p/you-are-not-a-horse",
+          "title": "You are not a horse"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://deepmind.google/blog/alphaevolve-impact/",
+          "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields \u2014 Google DeepMind"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48050278",
+          "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/research/natural-language-autoencoders",
+          "title": "Natural Language Autoencoders"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48052537",
+          "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text | Hacker News"
+        }
+      ]
+    }
+  ]
+}

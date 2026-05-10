@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-02",
+  "title": "Links for Apr 2, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://kathmandupost.com/money/2026/03/27/inside-nepal-s-fake-rescue-racket",
+          "title": "Inside Nepal\u2019s fake rescue racket"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47613078",
+          "title": "Inside Nepal's Fake Rescue Racket | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://i0exception.substack.com/p/reflections-on-technical-tradeoffs",
+          "title": "Reflections on Technical Tradeoffs"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://simonwillison.net/2026/Apr/2/lennys-podcast/",
+          "title": "Highlights from my conversation about agentic engineering on Lenny\u2019s Podcast"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://vitalik.eth.limo/general/2026/04/02/secure_llms.html",
+          "title": "My self-sovereign / local / private / secure LLM setup, April 2026"
+        }
+      ]
+    }
+  ]
+}

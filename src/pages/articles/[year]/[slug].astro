@@ -1,0 +1,40 @@
+---
+import ArticleSidebar from "../../../components/ArticleSidebar.astro";
+import ArticleWidgets from "../../../widgets/ArticleWidgets.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getArticles } from "../../../lib/articles.js";
+import { relativeUrl } from "../../../lib/urls.js";
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.map((article) => ({
+    params: {
+      year: String(article.date.getUTCFullYear()),
+      slug: article.slug,
+    },
+    props: {
+      article,
+      articles,
+    },
+  }));
+}
+
+const { article, articles } = Astro.props;
+const { Content } = article;
+const currentPath = `/articles/${article.date.getUTCFullYear()}/${article.slug}.html`;
+---
+
+<BaseLayout title={`${article.title} | Gurwinder Gulati`}>
+  <main id="top" class="article-shell">
+    <div class="article-layout">
+      <article class="article-content">
+        <a class="back-link" href={relativeUrl(currentPath, "/index.html#articles")}>Back to articles</a>
+        <p class="eyebrow">{article.displayDate}</p>
+        <h1>{article.title}</h1>
+        <Content />
+      </article>
+      <ArticleSidebar articles={articles} currentPath={currentPath} currentSlug={article.slug} />
+    </div>
+  </main>
+  <ArticleWidgets widgets={article.widgets || []} />
+</BaseLayout>

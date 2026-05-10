@@ -1,0 +1,20 @@
+---
+import { relativeUrl } from "../lib/urls.js";
+
+const { articles, currentPath, currentSlug } = Astro.props;
+const otherArticles = articles.filter((article) => article.slug !== currentSlug);
+---
+
+<aside class="article-sidebar" aria-label="Other articles">
+  <p class="eyebrow">More Articles</p>
+  <nav>
+    {
+      otherArticles.map((article) => (
+        <a href={relativeUrl(currentPath, article.url)}>
+          <strong>{article.title}</strong>
+          <time datetime={article.date.toISOString().slice(0, 10)}>{article.displayDate}</time>
+        </a>
+      ))
+    }
+  </nav>
+</aside>

@@ -1,0 +1,126 @@
+{
+  "date": "2026-03-26",
+  "title": "Links for Mar 26, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theargumentmag.com/p/against-the-smartphone-theory-of",
+          "title": "Against the Smartphone Theory of Everything"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theargumentmag.com/p/red-states-get-waymos-blue-states",
+          "title": "Red states get Waymos. Blue states get studies."
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/BCqC3",
+          "title": "https://archive.is/BCqC3"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://muratbuffalo.blogspot.com/2023/10/hints-for-distributed-systems-design.html",
+          "title": "Hints for Distributed Systems Design"
+        }
+      ]
+    },
+    {
+      "note": "Ted Chiang's \"Catching Crumbs from the Table,\" a 1 page sci fi short story on humans learning from superintelligent metahumans",
+      "links": [
+        {
+          "href": "https://gwern.net/doc/fiction/science-fiction/2000-chiang.pdf",
+          "title": "https://gwern.net/doc/fiction/science-fiction/2000-chiang.pdf"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://x.com/reidhoffman/status/2036826631206326339",
+          "title": "https://x.com/reidhoffman/status/2036826631206326339"
+        }
+      ]
+    },
+    {
+      "note": "Key glue work for better agentic eng (especially greenfield work)",
+      "links": [
+        {
+          "href": "https://projects.dev/",
+          "title": "Stripe Projects | Provision and Manage Services from the CLI"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.bbc.com/future/article/20260324-i-tried-to-prove-im-not-an-ai-deepfake",
+          "title": "I tried to prove I'm not AI. My aunt wasn't convinced"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47515502",
+          "title": "I tried to prove I'm not AI. My aunt wasn't convinced | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://bugs.xdavidhu.me/tesla/2026/03/23/running-tesla-model-3s-computer-on-my-desk-using-parts-from-crashed-cars/",
+          "title": "Running Tesla Model 3"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47523330",
+          "title": "Running Tesla Model 3's computer on my desk using parts from crashed cars | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://denovo.substack.com/p/what-happens-when-you-clone-mice",
+          "title": "What happens when you clone mice for 20 years straight?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://ngrok.com/blog/quantization",
+          "title": "Quantization from the ground up | ngrok blog"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://en.andros.dev/blog/aa31d744/from-zero-to-a-rag-system-successes-and-failures/",
+          "title": "https://en.andros.dev/blog/aa31d744/from-zero-to-a-rag-system-successes-and-failures/"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=47499356",
+          "title": "From zero to a RAG system: successes and failures | Hacker News"
+        }
+      ]
+    }
+  ]
+}
