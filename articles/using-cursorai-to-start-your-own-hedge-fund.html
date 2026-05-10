@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Using CursorAI to start your own hedge fund | Gurwinder Gulati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <site-header root="../"></site-header>
+    <main id="top" class="article-shell">
+      <div class="article-layout">
+      <article class="article-content">
+        <a class="back-link" href="../index.html#articles">Back to articles</a>
+        <p class="eyebrow">Feb 17, 2025</p>
+        <h1>Using CursorAI to start your own hedge fund</h1>
+        <p><em>Disclaimer: The information provided in this blog post is for informational and educational purposes only and should not be construed as financial, investment, or legal advice. The views expressed are my own and do not represent the opinions of any employer, organization, or affiliated entity. Investing involves risk, and you should conduct your own research or consult with a qualified financial professional before making any investment decisions.</em></p>
+
+        <p><a href="https://notesfrompoland.com/2024/10/14/poland-overtakes-russia-in-value-of-exports-for-first-time/">Poland's exports are booming</a>, and whenever I see news like this I'm curious to visit the country and see what life is like compared to all the headlines. I also become curious about how that might reflect in investing - what is the index fund like? How easy is it to invest in it from the US? Should I start my own hedge fund and make zillions? (shhh, <a href="https://www.thediff.co/archive/you-and-your-investment-research/">perhaps</a> not quite <a href="https://www.complexsystemspodcast.com/episodes/teaching-trading-ricki-heicklen/">that easy</a>)</p>
+
+        <details open>
+          <summary>Back of napkin financial analysis</summary>
+          <p>Turns out there's a <a href="https://old.reddit.com/r/ValueInvesting/comments/135cx58/the_polish_stock_market_seems_undervalued/">lot of caveats</a>! There's <a href="https://sg.morningstar.com/sg/news/164247/economic-progress-doesnt-equate-to-market-returns.aspx">research</a> on how economic growth correlates to stock market growth - <a href="https://blogs.cfainstitute.org/investor/2023/03/17/myth-busting-the-economy-drives-the-stock-market/">not that well</a>, it turns out (though that particular article doesn't look at Poland specifically).</p>
+          <p>My first thought is to learn by doing a back of napkin calculation myself. The Warsaw Stock Exchange index has ~92x since Apr 1991 until today Feb 2025 (<a href="https://tradingeconomics.com/wig:ind">link</a>) from 1,000 to ~92,500. In comparison, the S&amp;P 500 (<a href="https://tradingeconomics.com/united-states/stock-market">link</a>) has merely 32x during the same timeframe, from ~420 to ~13400. Let's not forget the exchange rate exposure though - in Apr 1991 it was <a href="https://fxtop.com/en/historical-currency-converter.php?A=1&amp;C1=USD&amp;C2=PLN&amp;DD=01&amp;MM=04&amp;YYYY=1991&amp;btnOK=Go%21&amp;B=1&amp;P=-2&amp;I=1">1 USD to 1.2 PLN</a> whereas today it is <a href="https://fxtop.com/en/historical-currency-converter.php?A=1&amp;C1=USD&amp;C2=PLN&amp;DD=01&amp;MM=02&amp;YYYY=2025&amp;btnOK=Go%21&amp;B=1&amp;P=-2&amp;I=1">1:4.05</a>. As an extremely naive buy and hold comparison (plenty of asterisks, e.g. we're not accounting for risk-adjusted returns), if you had bought the WIG in PLN in Apr 1991 and sold in Feb 2025, your return would be 92x WIG growth * (1.2 / 4.05) exchange rate change = ~27x.</p>
+          <section class="return-widget" aria-labelledby="return-widget-heading">
+            <div class="return-widget-header">
+              <div>
+                <p class="eyebrow">Interactive napkin math</p>
+                <h2 id="return-widget-heading">WIG vs S&amp;P 500 annualized return</h2>
+              </div>
+              <p>
+                Adjust the exchange rates to see how much PLN depreciation
+                changes the WIG comparison for a USD investor.
+              </p>
+            </div>
+            <div class="return-widget-grid">
+              <div class="return-chart" aria-label="Annualized return comparison">
+                <div class="return-bar">
+                  <span id="wigNominalBar"></span>
+                  <strong>WIG nominal</strong>
+                  <output id="wigNominalOut">13.9%</output>
+                </div>
+                <div class="return-bar">
+                  <span id="wigUsdBar"></span>
+                  <strong>WIG USD-adjusted</strong>
+                  <output id="wigUsdOut">10.3%</output>
+                </div>
+                <div class="return-bar">
+                  <span id="spBar"></span>
+                  <strong>S&amp;P 500</strong>
+                  <output id="spOut">10.8%</output>
+                </div>
+              </div>
+              <div class="return-controls">
+                <label>
+                  Years held
+                  <input id="returnYears" type="range" min="1" max="80" step="1" value="34" />
+                  <output id="returnYearsValue">34</output>
+                </label>
+                <label>
+                  WIG multiple
+                  <input id="wigMultiple" type="range" min="1" max="200" step="1" value="92" />
+                  <output id="wigMultipleValue">92x</output>
+                </label>
+                <label>
+                  S&amp;P multiple
+                  <input id="spMultiple" type="range" min="1" max="100" step="1" value="32" />
+                  <output id="spMultipleValue">32x</output>
+                </label>
+                <label>
+                  USD/PLN start
+                  <input id="fxStart" type="range" min="0.1" max="10" step="0.05" value="1.2" />
+                  <output id="fxStartValue">1.20</output>
+                </label>
+                <label>
+                  USD/PLN end
+                  <input id="fxEnd" type="range" min="0.1" max="10" step="0.05" value="4.05" />
+                  <output id="fxEndValue">4.05</output>
+                </label>
+              </div>
+            </div>
+            <p class="return-widget-note">
+              USD-adjusted WIG multiple:
+              <strong id="wigUsdMultipleOut">27.3x</strong>
+            </p>
+          </section>
+        </details>
+
+        <figure>
+          <a href="https://index-funds.vercel.app/"><img src="../assets/index-funds-readme.png" alt="Index funds app screenshot" /></a>
+        </figure>
+
+        <p>Let's see what opportunities exist around the world - check <a href="https://index-funds.vercel.app/">it out live</a>! (disclaimer: hosted on Vercel free tier, so might not survive much traffic)</p>
+        <p>We can create this from scratch via <a href="https://www.cursor.com/">Cursor</a> - see <a href="cursorai-for-frontend-dev-first-impressions.html">technical blog post</a> for details. It took just 4 hours, an incredible a 5x - 10x productivity boost for side projects / new projects. Longer-term development will require evolving the process.</p>
+
+        <h2>Development Methodology</h2>
+        <ol>
+          <li>Initialize react app with <code>npx create-next-app@latest</code></li>
+          <li>Write a small <a href="https://github.com/GGulati/IndexFunds/blob/master/compose/requirements.md">requirements file</a></li>
+          <li>Leverage Cursor's compose mode with the prompt: <code>Help me build the Index Fund app based on the 'requirements.md' file. The UI should be similar to the attached UI</code>. Attach the files in compose/ as well as a screenshot of the <a href="https://finance.yahoo.com/quote/%5EGSPC/">Yahoo Finance UI for S&amp;P 500</a>.</li>
+          <li>Iterate to add each feature at a time, starting with fetching live data from Yahoo Finance, fixing CORS issues, and incrementally adding new features.</li>
+          <li>Intermediate commands not recorded, but can see feature development in the commit history (<a href="https://github.com/GGulati/IndexFunds">Github</a>).</li>
+        </ol>
+
+        <h2>Results</h2>
+        <p>After <a href="https://index-funds.vercel.app/">analyzing all of these countries</a>, even if you had a crystal ball 20 years ago, you would choose to invest in the S&amp;P 500! Perhaps we'll have to wait to found our hedge fund, but thanks to LLM-first development we can explore our ideas extremely quickly.</p>
+      </article>
+      <article-sidebar current="using-cursorai-to-start-your-own-hedge-fund"></article-sidebar>
+      </div>
+    </main>
+    <site-footer root="../"></site-footer>
+    <script src="../components.js" defer></script>
+    <script>
+      const returnInputs = {
+        years: document.getElementById("returnYears"),
+        wigMultiple: document.getElementById("wigMultiple"),
+        spMultiple: document.getElementById("spMultiple"),
+        fxStart: document.getElementById("fxStart"),
+        fxEnd: document.getElementById("fxEnd"),
+      };
+
+      const returnOutputs = {
+        wigNominal: document.getElementById("wigNominalOut"),
+        wigUsd: document.getElementById("wigUsdOut"),
+        sp: document.getElementById("spOut"),
+        wigUsdMultiple: document.getElementById("wigUsdMultipleOut"),
+        wigNominalBar: document.getElementById("wigNominalBar"),
+        wigUsdBar: document.getElementById("wigUsdBar"),
+        spBar: document.getElementById("spBar"),
+        yearsValue: document.getElementById("returnYearsValue"),
+        wigMultipleValue: document.getElementById("wigMultipleValue"),
+        spMultipleValue: document.getElementById("spMultipleValue"),
+        fxStartValue: document.getElementById("fxStartValue"),
+        fxEndValue: document.getElementById("fxEndValue"),
+      };
+
+      function annualizedReturn(multiple, years) {
+        return Math.pow(multiple, 1 / years) - 1;
+      }
+
+      function updateReturnWidget() {
+        const years = Number(returnInputs.years.value);
+        const wigMultiple = Number(returnInputs.wigMultiple.value);
+        const spMultiple = Number(returnInputs.spMultiple.value);
+        const fxStart = Number(returnInputs.fxStart.value);
+        const fxEnd = Number(returnInputs.fxEnd.value);
+        const wigUsdMultiple = wigMultiple * (fxStart / fxEnd);
+
+        const returns = {
+          wigNominal: annualizedReturn(wigMultiple, years),
+          wigUsd: annualizedReturn(wigUsdMultiple, years),
+          sp: annualizedReturn(spMultiple, years),
+        };
+
+        const maxReturn = Math.max(returns.wigNominal, returns.wigUsd, returns.sp, 0.01);
+        returnOutputs.wigNominal.textContent = `${(returns.wigNominal * 100).toFixed(1)}%`;
+        returnOutputs.wigUsd.textContent = `${(returns.wigUsd * 100).toFixed(1)}%`;
+        returnOutputs.sp.textContent = `${(returns.sp * 100).toFixed(1)}%`;
+        returnOutputs.wigUsdMultiple.textContent = `${wigUsdMultiple.toFixed(1)}x`;
+        returnOutputs.yearsValue.textContent = years.toFixed(0);
+        returnOutputs.wigMultipleValue.textContent = `${wigMultiple.toFixed(0)}x`;
+        returnOutputs.spMultipleValue.textContent = `${spMultiple.toFixed(0)}x`;
+        returnOutputs.fxStartValue.textContent = fxStart.toFixed(2);
+        returnOutputs.fxEndValue.textContent = fxEnd.toFixed(2);
+        returnOutputs.wigNominalBar.style.width = `${(returns.wigNominal / maxReturn) * 100}%`;
+        returnOutputs.wigUsdBar.style.width = `${(returns.wigUsd / maxReturn) * 100}%`;
+        returnOutputs.spBar.style.width = `${(returns.sp / maxReturn) * 100}%`;
+      }
+
+      Object.values(returnInputs).forEach((input) => {
+        input.addEventListener("input", updateReturnWidget);
+      });
+      updateReturnWidget();
+    </script>
+  </body>
+</html>

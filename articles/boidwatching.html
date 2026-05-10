@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boidwatching | Gurwinder Gulati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <site-header root="../"></site-header>
+    <main id="top" class="article-shell">
+      <div class="article-layout">
+      <article class="article-content">
+        <a class="back-link" href="../index.html#articles">Back to articles</a>
+        <p class="eyebrow">Apr 9, 2011</p>
+        <h1>Boidwatching</h1>
+        <p>I'm sure you're all familiar with Nicolas Cage and his birdlike photoshopped hair. Or should I say... boidlike hair?</p>
+        <figure class="narrow-figure">
+          <img src="../assets/hairisboid.png" alt="My hair is a boid. Your argument is NULL." />
+        </figure>
+        <p>Boids are just a digital attempt to recreate birds in computer simulations, be they in games or for academic purposes. The favored algorithm family to emulate the unpredictability of groups of animals - including birds - is called <em>flocking</em>. And one of the most famous flocking algorithms is the Boids Flocking Algorithm developed by <a href="http://www.red3d.com/cwr/boids/">Craig Reynolds</a>.</p>
+        <p>Boids is a wonderful flocking algorithm due to its simplicity and ease of implementation, since it relies on 3 behavioral components to simulate a single bird's (or boid's) actions. The real beauty of it is that by creating 20 or 30 of these simple little boids results in a complex-looking, unpredictable yet deterministic flocking behavior. Since the algorithm is so lightweight, it can be used to make your game feel more alive for a low-cost in programmer time and runtime resources.</p>
+        <p>The three rules of boids are <em>cohesion</em>, <em>separation</em> and <em>alignment</em>. <em>Cohesion</em> emulates the idea that the member of a flock tries to stay with the flock - that is, the animal approaches the center of mass of the flock. Its counterpart, <em>separation</em>, mirrors the tendency of animals to keep some personal space between themselves and their nearest neighbors. Finally, <em>alignment</em> acknowledges that animals in a flock tend to have roughly the same speed - that is, each animal attempts to match its speed and direction to that of nearby animals.</p>
+        <p>Each of these rules has to evaluated once per frame for each boid. Each rule can be written as a programmatically function that always returns a vector.</p>
+        <p>Programmatically speaking, cohesion requires each boid to know where the center of mass of the flock is. You can calculate the position in 2D or 3D space by adding together the positions of each boid in a flock, then dividing each component (that is, the value in the X, Y and Z dimensions) by the total number of boids in that flock.</p>
+        <p>Now that the boid knows where the flock is, all it has to do to figure out the strength of cohesion is to find the directional vector between its position and the flock's position, then scale that vector down by some constant value (generally 1/100 is an appropriate scalar). The scalar represents that the boid has a fairly low motivation to tend towards the center of the flock, but it still has some tendency to do so.</p>
+        <p>Separation, on the other hand, is a much stronger behavior. For this behavior, the boid finds each boid within a certain distance of itself - say, 10 feet, or 100 pixels - and finds the directional vector heading away from the neighboring boid. By adding together all of these repulsion vectors, you have an avoidance vector. Generally, this value is not scaled down since it is important to ensure that boids don't collide on-screen. This also makes boids even more lightweight, since they don't need a physics engine to monitor them.</p>
+        <p>The third cardinal component of boids, alignment, is also a fast calculation. However, it requires the boid to know the heading of the flock. To calculate the heading of the flock, add together the heading vectors of each of the boids, then divide each component by the total number of boids in that flock. All you have to do is scale this value down by a constant factor (generally 1/8 is sufficient) in order to have your final component vector.</p>
+        <p>The last step of a boid is to add together these three vectors, then move itself accordingly. You may want to have vectors of magnitude greater than some threshold to be scaled down so as not to exceed a maximum movement magnitude. However, it is essential that you don't scale all of your vectors, so as to mimic how flocks and individual birds within them change speeds constantly.</p>
+        <p>I've also <a href="http://code.google.com/p/ggulati/downloads/detail?name=AI%20Sandbox.zip">written the code</a> for a simple XNA-rendered boids application, which can be downloaded from Google Code. Feel free to comment if you have any questions!</p>
+      </article>
+      <article-sidebar current="boidwatching"></article-sidebar>
+      </div>
+    </main>
+    <site-footer root="../"></site-footer>
+    <script src="../components.js" defer></script>
+  </body>
+</html>
