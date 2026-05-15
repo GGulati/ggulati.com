@@ -37,4 +37,167 @@ const currentPath = `/articles/${article.date.getUTCFullYear()}/${article.slug}.
     </div>
   </main>
   <ArticleWidgets widgets={article.widgets || []} />
+  <script is:inline>
+    function setupInlineFootnotes() {
+      const article = document.querySelector(".article-content");
+      if (!article) return;
+
+      const definitionPattern = /^\s*\[(\d+)\]\s+/;
+      const definitions = new Map();
+      const definitionElements = [];
+      const definitionLikeElements = [];
+      const sourceElements = article.querySelectorAll("p, li");
+
+      function removeDefinitionPrefix(element) {
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+        let node = walker.nextNode();
+
+        while (node) {
+          const match = node.textContent.match(definitionPattern);
+          if (match) {
+            node.textContent = node.textContent.replace(definitionPattern, "");
+            return;
+          }
+          if (node.textContent.trim()) return;
+          node = walker.nextNode();
+        }
+      }
+
+      sourceElements.forEach((element) => {
+        const match = element.textContent.trim().match(definitionPattern);
+        if (!match) return;
+
+        definitionLikeElements.push(element);
+        if (definitions.has(match[1])) return;
+        const clone = element.cloneNode(true);
+        removeDefinitionPrefix(clone);
+        definitions.set(match[1], clone.innerHTML.trim());
+        definitionElements.push(element);
+        element.hidden = true;
+      });
+
+      if (!definitions.size) return;
+
+      let activePopover = null;
+      let activeMarker = null;
+
+      function closeFootnote() {
+        activePopover?.remove();
+        activePopover = null;
+        activeMarker?.setAttribute("aria-expanded", "false");
+        activeMarker = null;
+      }
+
+      function positionPopover(popover, marker) {
+        const markerRect = marker.getBoundingClientRect();
+        const gap = 8;
+        const margin = 12;
+
+        popover.style.left = "0px";
+        popover.style.top = "0px";
+        const popoverRect = popover.getBoundingClientRect();
+        const viewportWidth = document.documentElement.clientWidth;
+        const viewportHeight = document.documentElement.clientHeight;
+        const preferredLeft = markerRect.left + markerRect.width / 2 - popoverRect.width / 2;
+        const left = Math.min(Math.max(preferredLeft, margin), viewportWidth - popoverRect.width - margin);
+        const roomBelow = viewportHeight - markerRect.bottom;
+        const top = roomBelow >= popoverRect.height + gap + margin
+          ? markerRect.bottom + gap
+          : Math.max(margin, markerRect.top - popoverRect.height - gap);
+
+        popover.style.left = `${left}px`;
+        popover.style.top = `${top}px`;
+      }
+
+      function openFootnote(marker) {
+        const id = marker.dataset.footnoteRef;
+        const html = definitions.get(id);
+        if (!html) return;
+
+        closeFootnote();
+        activeMarker = marker;
+        marker.setAttribute("aria-expanded", "true");
+
+        const popover = document.createElement("aside");
+        popover.className = "inline-footnote-popover";
+        popover.setAttribute("role", "dialog");
+        popover.setAttribute("aria-label", `Footnote ${id}`);
+        popover.innerHTML = `
+          <button class="inline-footnote-close" type="button" aria-label="Close footnote">X</button>
+          <div class="inline-footnote-body">${html}</div>
+        `;
+        popover.querySelector(".inline-footnote-close").addEventListener("click", closeFootnote);
+        document.body.append(popover);
+        activePopover = popover;
+        positionPopover(popover, marker);
+      }
+
+      function enhanceTextNode(node) {
+        const pattern = /\[(\d+)\]/g;
+        const text = node.textContent;
+        let match;
+        let lastIndex = 0;
+        let changed = false;
+        const fragment = document.createDocumentFragment();
+
+        while ((match = pattern.exec(text))) {
+          const id = match[1];
+          if (!definitions.has(id)) continue;
+
+          changed = true;
+          fragment.append(document.createTextNode(text.slice(lastIndex, match.index)));
+          const marker = document.createElement("button");
+          marker.type = "button";
+          marker.className = "inline-footnote-marker";
+          marker.dataset.footnoteRef = id;
+          marker.setAttribute("aria-expanded", "false");
+          marker.textContent = `[${id}]`;
+          marker.addEventListener("click", (event) => {
+            event.stopPropagation();
+            openFootnote(marker);
+          });
+          fragment.append(marker);
+          lastIndex = pattern.lastIndex;
+        }
+
+        if (!changed) return;
+        fragment.append(document.createTextNode(text.slice(lastIndex)));
+        node.replaceWith(fragment);
+      }
+
+      const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent || definitionLikeElements.some((element) => element.contains(parent))) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          if (parent.closest("pre, code, script, style, button, .inline-footnote-popover")) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return /\[\d+\]/.test(node.textContent) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        },
+      });
+      const textNodes = [];
+      let node = walker.nextNode();
+      while (node) {
+        textNodes.push(node);
+        node = walker.nextNode();
+      }
+      textNodes.forEach(enhanceTextNode);
+
+      document.addEventListener("click", (event) => {
+        if (!activePopover) return;
+        if (activePopover.contains(event.target) || activeMarker?.contains(event.target)) return;
+        closeFootnote();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeFootnote();
+      });
+      window.addEventListener("resize", () => {
+        if (activePopover && activeMarker) positionPopover(activePopover, activeMarker);
+      });
+    }
+
+    setupInlineFootnotes();
+  </script>
 </BaseLayout>

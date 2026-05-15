@@ -1,0 +1,165 @@
+---
+---
+
+<script is:inline>
+  function renderSubscriptionVitalsWidget(slot) {
+    slot.innerHTML = `
+      <section class="subscription-widget" aria-labelledby="subscription-widget-heading">
+        <div class="subscription-widget-header">
+          <div>
+            <p class="eyebrow">Interactive model</p>
+            <h2 id="subscription-widget-heading">Subscription membership stability</h2>
+          </div>
+        </div>
+        <div class="subscription-summary">
+          <div>
+            <span>Stable paid members</span>
+            <strong data-output="steadyMembers">3,000</strong>
+          </div>
+          <div>
+            <span>Monthly paid adds</span>
+            <strong data-output="paidAdds">300</strong>
+          </div>
+          <div>
+            <span>Years to stability</span>
+            <strong data-output="yearsToStability">2.4</strong>
+          </div>
+        </div>
+        <div class="subscription-widget-grid">
+          <div class="subscription-chart-wrap">
+            <svg class="subscription-chart" viewBox="0 0 720 360" role="img" aria-labelledby="subscription-chart-title subscription-chart-desc">
+              <title id="subscription-chart-title">Paid membership over time</title>
+              <desc id="subscription-chart-desc">A line chart showing paid members approaching a long-term steady state.</desc>
+              <g data-chart="grid"></g>
+              <line data-chart="steadyLine" class="subscription-chart-steady" x1="58" y1="40" x2="690" y2="40"></line>
+              <path data-chart="area" class="subscription-chart-area"></path>
+              <path data-chart="line" class="subscription-chart-line"></path>
+              <circle data-chart="startPoint" class="subscription-chart-point" r="4"></circle>
+              <circle data-chart="endPoint" class="subscription-chart-point" r="4"></circle>
+              <g data-chart="labels"></g>
+            </svg>
+          </div>
+          <div class="subscription-controls">
+            <label>Monthly acquisitions<input data-input="acquisitions" type="range" min="0" max="2000" step="25" value="500" /><output data-output="acquisitionsValue">500</output></label>
+            <label>Trial conversion<input data-input="trialRetention" type="range" min="0" max="100" step="1" value="60" /><output data-output="trialRetentionValue">60%</output></label>
+            <label>Paid monthly retention<input data-input="paidRetention" type="range" min="50" max="100" step="0.5" value="90" /><output data-output="paidRetentionValue">90%</output></label>
+            <label>Starting paid members<input data-input="startingMembers" type="range" min="0" max="20000" step="250" value="2000" /><output data-output="startingMembersValue">2,000</output></label>
+          </div>
+        </div>
+      </section>
+    `;
+
+    const input = (name) => slot.querySelector(`[data-input="${name}"]`);
+    const output = (name) => slot.querySelector(`[data-output="${name}"]`);
+    const chart = (name) => slot.querySelector(`[data-chart="${name}"]`);
+    const inputs = {
+      acquisitions: input("acquisitions"),
+      trialRetention: input("trialRetention"),
+      paidRetention: input("paidRetention"),
+      startingMembers: input("startingMembers"),
+    };
+    const numberFormat = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+    const plot = { left: 58, right: 690, top: 34, bottom: 310 };
+    const width = plot.right - plot.left;
+    const height = plot.bottom - plot.top;
+
+    function formatMembers(value) {
+      return numberFormat.format(Math.round(value));
+    }
+
+    function pointFor(month, value, maxMonth, maxValue) {
+      return {
+        x: plot.left + (month / maxMonth) * width,
+        y: plot.bottom - (value / maxValue) * height,
+      };
+    }
+
+    function linePath(points) {
+      return points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`).join(" ");
+    }
+
+    function update() {
+      const acquisitions = Number(inputs.acquisitions.value);
+      const trialRetention = Number(inputs.trialRetention.value) / 100;
+      const paidRetention = Number(inputs.paidRetention.value) / 100;
+      const startingMembers = Number(inputs.startingMembers.value);
+      const years = 5;
+      const months = years * 12;
+      const monthlyPaidAdds = acquisitions * trialRetention;
+      const monthlyPaidChurn = 1 - paidRetention;
+      const hasSteadyState = monthlyPaidChurn > 0 || monthlyPaidAdds === 0;
+      const steadyMembers = monthlyPaidChurn > 0 ? monthlyPaidAdds / monthlyPaidChurn : startingMembers;
+      const values = [{ month: 0, members: startingMembers }];
+      let paidMembers = startingMembers;
+
+      for (let month = 1; month <= months; month += 1) {
+        paidMembers = paidMembers * paidRetention + monthlyPaidAdds;
+        values.push({ month, members: paidMembers });
+      }
+
+      const maxValue = Math.max(steadyMembers, startingMembers, ...values.map((item) => item.members), 1) * 1.08;
+      const maxMonth = Math.max(months, 1);
+      const points = values.map((item) => pointFor(item.month, item.members, maxMonth, maxValue));
+      const steadyPoint = pointFor(0, steadyMembers, maxMonth, maxValue);
+      const startPoint = points[0];
+      const endPoint = points[points.length - 1];
+      const stableBand = Math.max(steadyMembers * 0.05, 1);
+      let stabilityMonth = hasSteadyState ? values.find((item) => Math.abs(item.members - steadyMembers) <= stableBand)?.month : undefined;
+
+      if (hasSteadyState && stabilityMonth === undefined) {
+        let projectedMembers = paidMembers;
+        for (let month = months + 1; month <= 1200; month += 1) {
+          projectedMembers = projectedMembers * paidRetention + monthlyPaidAdds;
+          if (Math.abs(projectedMembers - steadyMembers) <= stableBand) {
+            stabilityMonth = month;
+            break;
+          }
+        }
+      }
+
+      output("steadyMembers").textContent = hasSteadyState ? formatMembers(steadyMembers) : "No limit";
+      output("paidAdds").textContent = formatMembers(monthlyPaidAdds);
+      output("yearsToStability").textContent = hasSteadyState
+        ? stabilityMonth === undefined ? ">100" : (stabilityMonth / 12).toFixed(1).replace(".0", "")
+        : "Never";
+      output("acquisitionsValue").textContent = formatMembers(acquisitions);
+      output("trialRetentionValue").textContent = `${inputs.trialRetention.value}%`;
+      output("paidRetentionValue").textContent = `${Number(inputs.paidRetention.value).toFixed(1).replace(".0", "")}%`;
+      output("startingMembersValue").textContent = formatMembers(startingMembers);
+
+      chart("line").setAttribute("d", linePath(points));
+      chart("area").setAttribute("d", `${linePath(points)} L ${endPoint.x.toFixed(1)} ${plot.bottom} L ${startPoint.x.toFixed(1)} ${plot.bottom} Z`);
+      chart("steadyLine").setAttribute("y1", steadyPoint.y.toFixed(1));
+      chart("steadyLine").setAttribute("y2", steadyPoint.y.toFixed(1));
+      chart("startPoint").setAttribute("cx", startPoint.x.toFixed(1));
+      chart("startPoint").setAttribute("cy", startPoint.y.toFixed(1));
+      chart("endPoint").setAttribute("cx", endPoint.x.toFixed(1));
+      chart("endPoint").setAttribute("cy", endPoint.y.toFixed(1));
+
+      const gridSteps = [0, 0.25, 0.5, 0.75, 1];
+      chart("grid").innerHTML = gridSteps.map((step) => {
+        const y = plot.bottom - step * height;
+        const label = formatMembers(maxValue * step);
+        return `<line x1="${plot.left}" y1="${y.toFixed(1)}" x2="${plot.right}" y2="${y.toFixed(1)}"></line><text x="${plot.left - 10}" y="${(y + 4).toFixed(1)}">${label}</text>`;
+      }).join("") + Array.from({ length: years + 1 }, (_, year) => {
+        const x = plot.left + (year / years) * width;
+        return `<line class="subscription-chart-year" x1="${x.toFixed(1)}" y1="${plot.top}" x2="${x.toFixed(1)}" y2="${plot.bottom}"></line>`;
+      }).join("");
+
+      chart("labels").innerHTML = `
+        <text x="${plot.left}" y="336">Now</text>
+        ${Array.from({ length: years }, (_, index) => {
+          const year = index + 1;
+          const x = plot.left + (year / years) * width;
+          return `<text x="${x.toFixed(1)}" y="336" text-anchor="${year === years ? "end" : "middle"}">${year} yr</text>`;
+        }).join("")}
+        <text x="${plot.right}" y="${Math.max(18, steadyPoint.y - 8).toFixed(1)}" text-anchor="end">${hasSteadyState ? `steady ${formatMembers(steadyMembers)}` : "no steady state"}</text>
+      `;
+    }
+
+    Object.values(inputs).forEach((field) => field.addEventListener("input", update));
+    update();
+  }
+
+  document.querySelectorAll('[data-widget="subscription-vitals"]').forEach(renderSubscriptionVitalsWidget);
+</script>

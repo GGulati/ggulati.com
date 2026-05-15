@@ -1,6 +1,8 @@
 node_modules/
 dist/
 .astro/
+.playwright/
 .deploy.env
 links/title-cache.json
 npm-debug.log*
+links.txt

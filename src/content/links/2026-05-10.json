@@ -25,7 +25,7 @@
       "links": [
         {
           "href": "https://www.cnn.com/2026/05/06/health/andes-strain-hantavirus-explained",
-          "title": "https://www.cnn.com/2026/05/06/health/andes-strain-hantavirus-explained"
+          "title": "What doctors know about how the Andes hantavirus spreads"
         }
       ]
     },
@@ -34,7 +34,7 @@
       "links": [
         {
           "href": "https://www.cnbc.com/2026/04/10/34-year-old-product-manager-opened-a-restaurant-after-being-laid-off-it-brings-in-up-to-140000-a-month.html",
-          "title": "34-year-old product manager opened a restaurant after being laid off\u2014it brings in up to $140,000 a month"
+          "title": "34-year-old product manager opened a restaurant after being laid off - it brings in up to $140,000 a month"
         }
       ]
     },
@@ -44,6 +44,19 @@
         {
           "href": "https://old.reddit.com/r/AskNYC/comments/1t8on4o/just_for_discussion_what_does_it_cost_to_open_up/?sort=confidence",
           "title": "Just for discussion: what does it cost to open up a small coffee shop in this city?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.opendata.dev/blog/faster-timeseries-aggregations",
+          "title": "Faster Timeseries Aggregations"
+        },
+        {
+          "href": "https://www.vldb.org/pvldb/vol8/p1816-teller.pdf",
+          "title": "Gorilla: A Fast, Scalable, In-Memory Time Series Database"
         }
       ]
     }

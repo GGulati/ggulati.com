@@ -1,6 +1,7 @@
 import { Client } from "basic-ftp";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { existsSync, readFileSync, statSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 function loadEnv(path: string) {
   const values: Record<string, string> = {};
@@ -15,7 +16,10 @@ function loadEnv(path: string) {
   return values;
 }
 
-const env = loadEnv(".deploy.env");
+const scriptDir = dirname(fileURLToPath(import.meta.url));
+const projectRoot = resolve(scriptDir, "..");
+const distDir = resolve(projectRoot, "dist");
+const env = loadEnv(resolve(projectRoot, ".deploy.env"));
 const required = ["FTP_HOST", "FTP_USER", "FTP_PASSWORD", "FTP_REMOTE_DIR"];
 const missing = required.filter((key) => !env[key]);
 if (missing.length) {
@@ -24,6 +28,10 @@ if (missing.length) {
 
 if (env.FTP_CLEAR_REMOTE !== "true") {
   throw new Error("Set FTP_CLEAR_REMOTE=true in .deploy.env to replace the remote directory with dist/.");
+}
+
+if (!existsSync(distDir) || !statSync(distDir).isDirectory()) {
+  throw new Error("Missing Astro build output: run npm run build before npm run deploy.");
 }
 
 const client = new Client();
@@ -40,7 +48,7 @@ try {
 
   await client.cd(env.FTP_REMOTE_DIR);
   await client.clearWorkingDir();
-  await client.uploadFromDir(resolve("dist"));
+  await client.uploadFromDir(distDir);
 } finally {
   client.close();
 }

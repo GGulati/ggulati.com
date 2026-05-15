@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-12",
+  "title": "Links for May 12, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://matklad.github.io/2026/05/12/software-architecture.html",
+          "title": "Learning Software Architecture"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48106024",
+          "title": "Learning Software Architecture | Hacker News"
+        },
+        {
+          "href": "https://www.scattered-thoughts.net/writing/reflections-on-a-decade-of-coding/",
+          "title": "Reflections on a decade of coding"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48100433",
+          "title": "If AI writes your code, why use Python? | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://martin.sh/i-let-ai-build-a-tool-to-help-me-figure-out-what-was-waking-me-up-at-night/",
+          "title": "I Let AI Build a Tool to Help Me Figure Out What Was Waking Me Up at Night"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48100662",
+          "title": "I let AI build a tool to help me figure out what was waking me up at night | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://cayimby.org/blog/the-legal-trap-thats-making-california-condos-unaffordable-and-its-not-what-you-think/",
+          "title": "The Legal Trap That's Making California Condos Unaffordable-And It's Not What You Think"
+        },
+        {
+          "href": "https://www.therebuild.pub/p/a-starter-home-is-whatever-we-want",
+          "title": "A Starter Home is Whatever We Want it to Be"
+        }
+      ]
+    }
+  ]
+}

@@ -53,6 +53,8 @@ Key layout areas:
 
 ## Content Workflow
 
+For daily Links imports from `links.txt` or copied transcripts, follow `LINKS.md`.
+
 To add a new article:
 
 1. Create `src/content/articles/YYYY/new-article-slug.md`.

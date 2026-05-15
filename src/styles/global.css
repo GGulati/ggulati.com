@@ -670,6 +670,70 @@ h2 {
   cursor: pointer;
 }
 
+.inline-footnote-marker {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: 0;
+  background: transparent;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.inline-footnote-marker:hover,
+.inline-footnote-marker:focus-visible {
+  color: var(--ink);
+}
+
+.inline-footnote-popover {
+  position: fixed;
+  z-index: 50;
+  width: min(280px, calc(100vw - 24px));
+  padding: 16px 38px 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.inline-footnote-popover a {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.inline-footnote-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f7f4ed;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.inline-footnote-close:hover,
+.inline-footnote-close:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
 .return-widget {
   margin-top: 24px;
   padding: clamp(18px, 3vw, 24px);
@@ -779,6 +843,153 @@ h2 {
   font-family: "JetBrains Mono", monospace;
 }
 
+.subscription-widget {
+  margin-top: 24px;
+  padding: clamp(18px, 3vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.subscription-widget-header {
+  margin-bottom: 20px;
+}
+
+.subscription-widget-header h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+}
+
+.subscription-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.subscription-summary div {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f4ed;
+}
+
+.subscription-summary span,
+.subscription-summary strong {
+  display: block;
+}
+
+.subscription-summary span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.subscription-summary strong {
+  margin-top: 4px;
+  color: var(--accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  line-height: 1.2;
+}
+
+.subscription-widget-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 20px;
+  align-items: start;
+}
+
+.subscription-chart-wrap {
+  min-width: 0;
+}
+
+.subscription-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+
+.subscription-chart [data-chart="grid"] line {
+  stroke: rgba(216, 208, 194, 0.9);
+  stroke-width: 1;
+}
+
+.subscription-chart [data-chart="grid"] .subscription-chart-year {
+  stroke: rgba(201, 93, 49, 0.26);
+}
+
+.subscription-chart [data-chart="grid"] text,
+.subscription-chart [data-chart="labels"] text {
+  fill: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.subscription-chart-area {
+  fill: rgba(0, 109, 119, 0.12);
+}
+
+.subscription-chart-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.subscription-chart-steady {
+  stroke: var(--warm);
+  stroke-dasharray: 8 8;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.subscription-chart-point {
+  fill: var(--surface);
+  stroke: var(--accent-strong);
+  stroke-width: 3;
+}
+
+.subscription-controls {
+  display: grid;
+  gap: 10px;
+}
+
+.subscription-controls label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.subscription-controls input {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.subscription-controls output {
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+.subscription-widget-note {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
 .article-sidebar {
   position: sticky;
   top: 98px;
@@ -833,7 +1044,9 @@ h2 {
   }
 
   .return-widget-header,
-  .return-widget-grid {
+  .return-widget-grid,
+  .subscription-widget-header,
+  .subscription-widget-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -863,6 +1076,10 @@ h2 {
   }
 
   .demo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-summary {
     grid-template-columns: 1fr;
   }
 
