@@ -21,15 +21,11 @@
       ]
     },
     {
-      "note": "also this; about halfway through and it\u2019s interesting wrt what are the specific bottlenecks for scaling AI\n\nStratechery also cites him (Dylan Patel, SemiAnalysis): \nAlso aligns with this discussion",
+      "note": "also this; about halfway through and it’s interesting wrt what are the specific bottlenecks for scaling AI\n\nStratechery also cites him (Dylan Patel, SemiAnalysis): \nAlso aligns with this discussion",
       "links": [
         {
-          "href": "https://www.youtube.com/watch?v=mDG_Hx3BSUE",
-          "title": "https://www.youtube.com/watch?v=mDG_Hx3BSUE"
-        },
-        {
           "href": "https://newsletter.semianalysis.com/p/google-gemini-eats-the-world-gemini",
-          "title": "Google Gemini Eats The World \u2013 Gemini Smashes GPT-4 By 5X, The GPU-Poors"
+          "title": "Google Gemini Eats The World – Gemini Smashes GPT-4 By 5X, The GPU-Poors"
         }
       ]
     }

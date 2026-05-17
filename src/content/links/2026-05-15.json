@@ -1,0 +1,46 @@
+{
+  "date": "2026-05-15",
+  "title": "Links for May 15, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48141234",
+          "title": "Claude for Legal | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "tl;dr: Restaurant patrons in a recent study tipped their servers up to about 1 percentage point less on Saturdays and Sundays.",
+      "links": [
+        {
+          "href": "https://archive.is/aDZSP",
+          "title": "Why Do People Tip Less on the Weekends?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theintrinsicperspective.com/p/how-the-mfa-swallowed-literature",
+          "title": "How the MFA swallowed literature"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://chreke.com/posts/sql-incorrect-by-construction",
+          "title": "SQL: Incorrect by Construction"
+        },
+        {
+          "href": "https://lobste.rs/s/wehmq6/sql_incorrect_by_construction",
+          "title": "SQL: Incorrect by Construction | Lobsters"
+        }
+      ]
+    }
+  ]
+}

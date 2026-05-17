@@ -3,11 +3,11 @@
   "title": "Links for Apr 8, 2026",
   "groups": [
     {
-      "note": "\u201cGLM-5.1: Towards Long-Horizon Tasks\u201d",
+      "note": "“GLM-5.1: Towards Long-Horizon Tasks”",
       "links": [
         {
           "href": "https://z.ai/blog/glm-5.1",
-          "title": "https://z.ai/blog/glm-5.1"
+          "title": "GLM-5.1: Towards Long-Horizon Tasks"
         },
         {
           "href": "https://news.ycombinator.com/item?id=47677853",
@@ -90,7 +90,7 @@
       "links": [
         {
           "href": "https://newsletter.semianalysis.com/p/the-great-gpu-shortage-rental-capacity",
-          "title": "The Great GPU Shortage \u2013 Rental Capacity \u2013 Launching our H100 1 Year Rental Price Index"
+          "title": "The Great GPU Shortage – Rental Capacity – Launching our H100 1 Year Rental Price Index"
         }
       ]
     },
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "note": "We\u2019ll get there tho, you can see e.g. Anthropic is working on the building blocks with subagents + coordination mechanisms, plan mode, Claude Code for the Web (containerized execution) - I would expect within 3 - 6m at most we\u2019ll see full workflow / team orchestration as a product release from them\n\nDitto for Codex\n\nMVP version might not be there tho even with strong eng teams, might need another model bump or two, or more \u201charness engineering\u201d and thoughtful human in the loop. Maybe end of this year / early next Tough to really say given exponentials\n\nHere you go",
+      "note": "We’ll get there tho, you can see e.g. Anthropic is working on the building blocks with subagents + coordination mechanisms, plan mode, Claude Code for the Web (containerized execution) - I would expect within 3 - 6m at most we’ll see full workflow / team orchestration as a product release from them\n\nDitto for Codex\n\nMVP version might not be there tho even with strong eng teams, might need another model bump or two, or more “harness engineering” and thoughtful human in the loop. Maybe end of this year / early next Tough to really say given exponentials\n\nHere you go",
       "links": [
         {
           "href": "https://claude.com/blog/claude-managed-agents",
