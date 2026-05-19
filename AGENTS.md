@@ -82,7 +82,7 @@ To add a daily Links post:
 - Keep article metadata in Markdown frontmatter, not in page templates.
 - Keep daily link content in `src/content/links/*.json`, not hardcoded into `index.astro`.
 - The homepage should render the five most recent items from the combined article/link feed.
-- The full posts page should render the same combined feed with batched infinite scrolling.
+- The full posts page should render the same combined feed with article/link filters and batched infinite scrolling.
 - Do not hardcode article previews directly in `index.astro`.
 - Keep shared header and footer markup in `SiteHeader.astro` and `SiteFooter.astro`.
 - Keep outbound HTTP(S) link behavior centralized in `BaseLayout.astro`.

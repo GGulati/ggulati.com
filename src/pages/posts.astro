@@ -16,36 +16,80 @@ const initialCount = 20;
     </section>
 
     <section id="feed" class="section feed-section" aria-label="All articles and links">
+      <nav class="post-filter" aria-label="Post type filter">
+        <a href="posts.html" data-post-filter="all">All</a>
+        <a href="posts.html?type=articles" data-post-filter="article">Articles</a>
+        <a href="posts.html?type=links" data-post-filter="links">Links</a>
+      </nav>
       <FeedList items={feedItems} currentPath={currentPath} hiddenFrom={initialCount} />
       <div class="load-sentinel" data-feed-sentinel aria-hidden="true"></div>
     </section>
   </main>
   <script is:inline>
     const batchSize = 20;
-    const hiddenItems = Array.from(document.querySelectorAll(".feed-item-hidden"));
+    const feedItems = Array.from(document.querySelectorAll(".feed-item"));
+    const filterLinks = Array.from(document.querySelectorAll("[data-post-filter]"));
     const sentinel = document.querySelector("[data-feed-sentinel]");
+    let visibleItems = [];
+    let visibleCount = batchSize;
 
-    function revealNextBatch() {
-      hiddenItems.splice(0, batchSize).forEach((item) => {
-        item.classList.remove("feed-item-hidden");
+    function currentFilter() {
+      const type = new URLSearchParams(window.location.search).get("type");
+      if (type === "articles") return "article";
+      if (type === "links") return "links";
+      return "all";
+    }
+
+    function applyFilter(filter = currentFilter()) {
+      visibleCount = batchSize;
+      visibleItems = feedItems.filter((item) => filter === "all" || item.dataset.feedType === filter);
+      renderItems(filter);
+    }
+
+    function renderItems(filter) {
+      feedItems.forEach((item) => {
+        const matchesFilter = filter === "all" || item.dataset.feedType === filter;
+        const isRevealed = matchesFilter && visibleItems.indexOf(item) < visibleCount;
+        item.classList.toggle("feed-item-hidden", !isRevealed);
       });
 
-      if (!hiddenItems.length) {
-        sentinel?.remove();
-        observer?.disconnect();
+      filterLinks.forEach((link) => {
+        link.setAttribute("aria-current", link.dataset.postFilter === filter ? "page" : "false");
+      });
+
+      if (sentinel) {
+        sentinel.hidden = visibleCount >= visibleItems.length;
       }
+    }
+
+    function revealNextBatch() {
+      visibleCount += batchSize;
+      renderItems(currentFilter());
     }
 
     const observer = "IntersectionObserver" in window && sentinel
       ? new IntersectionObserver((entries) => {
-          if (entries.some((entry) => entry.isIntersecting)) revealNextBatch();
-        }, { rootMargin: "600px 0px" })
+        if (entries.some((entry) => entry.isIntersecting)) revealNextBatch();
+      }, { rootMargin: "600px 0px" })
       : null;
 
     if (observer && sentinel) {
       observer.observe(sentinel);
     } else {
-      while (hiddenItems.length) revealNextBatch();
+      visibleCount = feedItems.length;
     }
+
+    filterLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const url = new URL(link.href);
+        history.pushState(null, "", `${url.pathname}${url.search}`);
+        applyFilter(link.dataset.postFilter);
+        window.scrollTo({ top: document.querySelector("#feed").offsetTop, behavior: "smooth" });
+      });
+    });
+
+    window.addEventListener("popstate", () => applyFilter());
+    applyFilter();
   </script>
 </BaseLayout>

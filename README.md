@@ -27,7 +27,7 @@ Astro is used only as a build step. There is no backend requirement for hosting.
 ## Routes
 
 - `/index.html`: five most recent feed items, followed by side projects.
-- `/posts.html`: full reverse-chronological feed of articles and daily reading posts.
+- `/posts.html`: full reverse-chronological feed of articles and daily reading posts, with article/link filters.
 - `/about.html`: standalone About page.
 - `/articles/YYYY/slug.html`: long-form articles.
 - `/links/YYYY/MM-DD.html`: daily reading posts.

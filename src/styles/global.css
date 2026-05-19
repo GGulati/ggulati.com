@@ -398,6 +398,33 @@ h2 {
   text-decoration-thickness: 2px;
 }
 
+.post-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1040px;
+  margin-bottom: 20px;
+}
+
+.post-filter a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--accent-strong);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.post-filter a[aria-current="page"],
+.post-filter a:hover,
+.post-filter a:focus-visible {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
 .link-post h3 {
   margin-bottom: 10px;
   font-size: clamp(1.45rem, 3vw, 2.2rem);
