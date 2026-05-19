@@ -28,7 +28,7 @@ const currentPath = `/articles/${article.date.getUTCFullYear()}/${article.slug}.
   <main id="top" class="article-shell">
     <div class="article-layout">
       <article class="article-content">
-        <a class="back-link" href={relativeUrl(currentPath, "/index.html#articles")}>Back to articles</a>
+        <a class="back-link" href={relativeUrl(currentPath, "/index.html#feed")}>Back to feed</a>
         <p class="eyebrow">{article.displayDate}</p>
         <h1>{article.title}</h1>
         <Content />

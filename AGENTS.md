@@ -6,26 +6,26 @@ This is a static personal website built with Astro. Keep changes small, inspecta
 
 - `src/pages/` defines routes.
   - `src/pages/index.astro` is the homepage.
+  - `src/pages/posts.astro` is the full posts page.
   - `src/pages/about.astro` is the standalone About page.
-  - `src/pages/links.astro` is the full static Links archive.
   - `src/pages/articles/[year]/[slug].astro` renders article pages.
   - `src/pages/links/[year]/[monthDay].astro` renders daily link pages.
 - `src/layouts/BaseLayout.astro` owns the shared HTML shell, header/footer placement, global stylesheet import, and outbound-link behavior.
 - `src/components/` contains reused Astro components:
   - `SiteHeader.astro`
   - `SiteFooter.astro`
-  - `ArticleIndex.astro`
+  - `FeedList.astro`
   - `ArticleSidebar.astro`
   - `SideProjects.astro`
 - `src/content/articles/YYYY/*.md` contains migrated articles.
 - `src/content/links/*.json` contains daily reading posts.
 - `src/content/side-projects.json` contains side project metadata.
-- `src/lib/articles.js` and `src/lib/links.js` normalize content for pages/components.
+- `src/lib/articles.js`, `src/lib/links.js`, and `src/lib/feed.js` normalize content for pages/components.
 - `src/widgets/ArticleWidgets.astro` renders article-specific widget slots.
 - `src/styles/global.css` is the shared stylesheet.
 - `public/assets/` contains static assets copied directly to the built site.
 - `public/web.config` is the static IIS configuration copied into `dist/` for GoDaddy Windows hosting.
-- `scripts/deploy-ftp.ts` uploads `dist/` by FTP.
+- `scripts/deploy-rclone.ts` uploads `dist/` with rclone.
 
 ## Hosting And Build
 
@@ -45,7 +45,7 @@ Key layout areas:
 - Header and footer
 - Homepage article previews
 - Side projects section
-- Links sections and archive
+- Unified homepage feed and daily link detail pages
 - About page grid
 - Article layout and sidebar
 - Article body typography
@@ -67,21 +67,22 @@ To add a new article:
 3. Put any local images under `public/assets/`.
 4. If the article needs a demo, add an explicit slot such as `<div data-widget="name"></div>` in the Markdown and implement only that widget in `src/widgets/ArticleWidgets.astro`.
 
-The homepage and article sidebars pick up articles automatically.
+The homepage feed and article sidebars pick up articles automatically.
 
 To add a daily Links post:
 
 1. Create `src/content/links/YYYY-MM-DD.json`.
 2. Preserve related links in the same group, such as article plus HN/Lobsters comments.
 3. Use the quoted page title/headline as link text when available.
-4. If a title cannot be retrieved, use the full URL as the fallback title.
+4. If a title cannot be retrieved, ask the user for the title.
 5. Do not show per-link timestamps.
 
 ## Editing Rules
 
 - Keep article metadata in Markdown frontmatter, not in page templates.
 - Keep daily link content in `src/content/links/*.json`, not hardcoded into `index.astro`.
-- On the homepage, Links should show only the three most recent days, each headed by the date only, with all links for those days.
+- The homepage should render the five most recent items from the combined article/link feed.
+- The full posts page should render the same combined feed with batched infinite scrolling.
 - Do not hardcode article previews directly in `index.astro`.
 - Keep shared header and footer markup in `SiteHeader.astro` and `SiteFooter.astro`.
 - Keep outbound HTTP(S) link behavior centralized in `BaseLayout.astro`.
@@ -96,8 +97,8 @@ After edits, check:
 - `cmd /c npm run build` passes. If Astro telemetry hits sandbox issues, run with `ASTRO_TELEMETRY_DISABLED=1`.
 - Local `href` and `src` paths in `dist/**/*.html` resolve.
 - Article pages render the shared sidebar component.
-- The homepage article list is derived from article content, not hardcoded.
-- The homepage Links section shows only the three most recent days.
-- `links.html` statically renders all link days.
-- Bootstrapped link archives preserve all links and group related links where appropriate.
+- The homepage and full posts page are derived from article and link content, not hardcoded.
+- `links.html` is not generated; daily link detail pages remain available under `/links/YYYY/MM-DD.html`.
+- `rss.xml` includes both articles and daily link posts.
+- Bootstrapped link posts preserve all links and group related links where appropriate.
 - Outbound HTTP(S) links open in a new tab via the shared script.

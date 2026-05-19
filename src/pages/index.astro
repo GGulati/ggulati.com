@@ -1,26 +1,24 @@
 ---
-import ArticleIndex from "../components/ArticleIndex.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FeedList from "../components/FeedList.astro";
 import SideProjects from "../components/SideProjects.astro";
-import { getArticles } from "../lib/articles.js";
-import { getLinkPosts } from "../lib/links.js";
+import { getFeedItems } from "../lib/feed.js";
 import { relativeUrl } from "../lib/urls.js";
 
-const articles = await getArticles();
-const allLinkPosts = await getLinkPosts();
-const linkPosts = allLinkPosts.slice(0, 3);
+const feedItems = (await getFeedItems()).slice(0, 5);
 const currentPath = "/index.html";
 ---
 
-<BaseLayout title="Gurwinder Gulati | Articles">
+<BaseLayout title="Gurwinder Gulati | Recent Posts">
   <main id="top" class="articles-home">
     <section class="article-index-hero">
-      <p class="eyebrow">Technical Blog</p>
-      <h1>Articles</h1>
+      <p class="eyebrow">Articles & Links</p>
+      <h1>Recent Posts</h1>
     </section>
 
-    <section id="articles" class="section article-index-section">
-      <ArticleIndex articles={articles} currentPath={currentPath} />
+    <section id="feed" class="section feed-section" aria-label="Articles and links">
+      <FeedList items={feedItems} currentPath={currentPath} />
+      <p class="feed-more-link"><a href={relativeUrl(currentPath, "/posts.html#post-6")}>More...</a></p>
     </section>
 
     <section id="side-projects" class="section side-projects-section" aria-labelledby="side-projects-heading">
@@ -31,48 +29,30 @@ const currentPath = "/index.html";
       <SideProjects currentPath={currentPath} />
     </section>
 
-    <section id="links" class="section links-section" aria-labelledby="links-heading">
+    <section id="regular-reading" class="section regular-reading-section" aria-labelledby="regular-reading-heading">
       <div class="section-label">
-        <p class="eyebrow">Links</p>
-        <h2 id="links-heading"><a href={relativeUrl(currentPath, "/links.html")}>Links</a></h2>
+        <p class="eyebrow">Reading</p>
+        <h2 id="regular-reading-heading">Regular Reading</h2>
       </div>
-      <div class="link-date-picker">
-        <label for="homeLinkDateSelect">Jump to date</label>
-        <select id="homeLinkDateSelect">
-          <option value="">Select a date</option>
-          {allLinkPosts.map((post) => <option value={relativeUrl(currentPath, post.url)}>{post.displayDate}</option>)}
-        </select>
+      <div class="regular-reading-list">
+        <section aria-labelledby="daily-reading-heading">
+          <h3 id="daily-reading-heading">Daily</h3>
+          <ul>
+            <li><a href="https://www.bloomberg.com/account/newsletters/money-stuff">Matt Levine</a></li>
+            <li><a href="https://stratechery.com/">Stratechery</a></li>
+            <li><a href="https://marginalrevolution.com/">Marginal Revolution</a></li>
+            <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
+            <li><a href="https://lobste.rs/">Lobste.rs</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="weekly-reading-heading">
+          <h3 id="weekly-reading-heading">Weekly</h3>
+          <ul>
+            <li><a href="https://acoup.blog/">A Collection of Unmitigated Pedantry</a></li>
+            <li><a href="https://www.thediff.co/">The Diff</a></li>
+          </ul>
+        </section>
       </div>
-      <div class="link-post-list">
-        {
-          linkPosts.map((post) => (
-            <article class="link-post">
-              <h3><a href={relativeUrl(currentPath, post.url)}>{post.displayDate}</a></h3>
-              <ol class="daily-link-list">
-                {
-                  post.groups.map((group) => (
-                    <li>
-                      <div class="daily-link-group">
-                        {group.links.map((link) => <a href={link.href}>"{link.title}"</a>)}
-                      </div>
-                      {group.note && <p>{group.note}</p>}
-                    </li>
-                  ))
-                }
-              </ol>
-            </article>
-          ))
-        }
-      </div>
-      <p class="section-more-link"><a href={relativeUrl(currentPath, "/links.html")}>All...</a></p>
     </section>
   </main>
-  <script>
-    document.querySelector("#homeLinkDateSelect")?.addEventListener("change", (event) => {
-      const target = event.currentTarget;
-      if (target instanceof HTMLSelectElement && target.value) {
-        window.location.href = target.value;
-      }
-    });
-  </script>
 </BaseLayout>

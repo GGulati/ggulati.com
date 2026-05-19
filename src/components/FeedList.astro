@@ -1,0 +1,43 @@
+---
+import { relativeUrl } from "../lib/urls.js";
+
+const { items, currentPath, hiddenFrom = Infinity } = Astro.props;
+---
+
+<div class="feed-list">
+  {
+    items.map((item, index) => (
+      item.type === "article" ? (
+        <article id={`post-${index + 1}`} class:list={["feed-item", "article-preview", index >= hiddenFrom && "feed-item-hidden"]}>
+          <div class="article-preview-meta">
+            <time datetime={item.date.toISOString().slice(0, 10)}>{item.displayDate}</time>
+            <span>Article</span>
+          </div>
+          <h2><a href={relativeUrl(currentPath, item.url)}>{item.title}</a></h2>
+          <p>{item.excerpt}</p>
+          <a href={relativeUrl(currentPath, item.url)}>Continue...</a>
+        </article>
+      ) : (
+        <article id={`post-${index + 1}`} class:list={["feed-item", "feed-link-post", "link-post", index >= hiddenFrom && "feed-item-hidden"]}>
+          <div class="article-preview-meta">
+            <time datetime={item.date.toISOString().slice(0, 10)}>{item.displayDate}</time>
+            <span>Links</span>
+          </div>
+          <h2><a href={relativeUrl(currentPath, item.url)}>{item.title}</a></h2>
+          <ol class="daily-link-list">
+            {
+              item.groups.map((group) => (
+                <li>
+                  <div class="daily-link-group">
+                    {group.links.map((link) => <a href={link.href}>"{link.title}"</a>)}
+                  </div>
+                  {group.note && <p>{group.note}</p>}
+                </li>
+              ))
+            }
+          </ol>
+        </article>
+      )
+    ))
+  }
+</div>

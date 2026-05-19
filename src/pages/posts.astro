@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FeedList from "../components/FeedList.astro";
+import { getFeedItems } from "../lib/feed.js";
+
+const feedItems = await getFeedItems();
+const currentPath = "/posts.html";
+const initialCount = 20;
+---
+
+<BaseLayout title="All Posts | Gurwinder Gulati">
+  <main id="top" class="articles-home">
+    <section class="article-index-hero">
+      <p class="eyebrow">Articles & Links</p>
+      <h1>All Posts</h1>
+    </section>
+
+    <section id="feed" class="section feed-section" aria-label="All articles and links">
+      <FeedList items={feedItems} currentPath={currentPath} hiddenFrom={initialCount} />
+      <div class="load-sentinel" data-feed-sentinel aria-hidden="true"></div>
+    </section>
+  </main>
+  <script is:inline>
+    const batchSize = 20;
+    const hiddenItems = Array.from(document.querySelectorAll(".feed-item-hidden"));
+    const sentinel = document.querySelector("[data-feed-sentinel]");
+
+    function revealNextBatch() {
+      hiddenItems.splice(0, batchSize).forEach((item) => {
+        item.classList.remove("feed-item-hidden");
+      });
+
+      if (!hiddenItems.length) {
+        sentinel?.remove();
+        observer?.disconnect();
+      }
+    }
+
+    const observer = "IntersectionObserver" in window && sentinel
+      ? new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) revealNextBatch();
+        }, { rootMargin: "600px 0px" })
+      : null;
+
+    if (observer && sentinel) {
+      observer.observe(sentinel);
+    } else {
+      while (hiddenItems.length) revealNextBatch();
+    }
+  </script>
+</BaseLayout>

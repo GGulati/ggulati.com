@@ -54,4 +54,6 @@ Use this workflow when updating `src/content/links/*.json` from `links.txt` or a
 - Check for raw URL titles with a quick script or search before finishing.
 - Run `ASTRO_TELEMETRY_DISABLED=1 cmd /c npm run build`.
 - Confirm the expected `/links/YYYY/MM-DD.html` routes are generated.
-- Confirm the homepage still shows only the three most recent link days.
+- Confirm the homepage unified feed includes the new link day when it is among the five most recent items.
+- Confirm `/posts.html` includes the new link day in reverse-chronological order.
+- Confirm `rss.xml` includes the new link day.
