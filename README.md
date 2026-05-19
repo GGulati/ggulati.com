@@ -18,7 +18,7 @@ Static personal website for technical articles, daily reading links, and side pr
 |   |-- styles/            Global CSS
 |   `-- widgets/           Article widget renderers
 |-- public/assets/         Static assets copied into the built site
-|-- scripts/deploy-ftp.ts  Manual FTP upload of dist/
+|-- scripts/deploy-rclone.ts  Manual rclone upload of dist/
 `-- dist/                  Build output, ignored by git
 ```
 
@@ -52,9 +52,15 @@ On a Windows machine, use `cmd /c npm run build` from PowerShell.
 
 ## Deployment
 
-1. Copy `.deploy.env.example` to `.deploy.env`.
-2. Fill in FTP credentials and remote directory.
-3. Run `npm run build`.
-4. Run `npm run deploy`.
+1. Install `rclone`.
+2. Copy `.deploy.env.example` to `.deploy.env`.
+3. Set `RCLONE_REMOTE` and `RCLONE_REMOTE_DIR`. Use `RCLONE_REMOTE=:ftp` with the FTP settings in `.deploy.env`, or use a named rclone remote such as `godaddy`.
+4. Run `npm run build`.
+5. Validate with `npm run deploy:dry`.
+6. Deploy with `npm run deploy`.
 
-`.deploy.env` is gitignored. The deploy script uploads `dist/` and requires `FTP_CLEAR_REMOTE=true` so replacing the remote directory is explicit.
+`.deploy.env` is gitignored. The default deploy mode is `rclone copy`, which upserts new and changed files from `dist/` without deleting remote files. Use `npm run deploy:sync:dry` to preview an exact sync, and only use `npm run deploy:sync` after setting `RCLONE_ALLOW_SYNC=true`.
+
+If the FTP endpoint is an IP address whose certificate expects a separate TLS server name, rclone cannot pass that server name independently. Set `RCLONE_FTP_NO_CHECK_CERTIFICATE=true` only for that hosting setup.
+
+Inline FTP deploys use rclone's `--inplace` mode because this host does not allow replacing an existing file via temp-file rename.
