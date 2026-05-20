@@ -37,7 +37,7 @@ Astro is used only as a build step. There is no backend requirement for hosting.
 
 Add articles as Markdown files under `src/content/articles/YYYY/`. Feed entries and sidebars are derived from frontmatter dynamically.
 
-Add daily reading posts as JSON files under `src/content/links/`. The legacy link export was used for the initial bootstrap only; normal builds do not read or regenerate from it.
+Add daily reading posts as JSON files under `src/content/links/`.
 
 Article-specific demos use explicit widget slots in Markdown, with the implementation kept in `src/widgets/ArticleWidgets.astro`.
 

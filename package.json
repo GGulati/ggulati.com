@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && tsx scripts/fix-dist-paths.ts",
+    "build": "tsx scripts/build.ts",
+    "build:debug": "tsx scripts/build.ts --include-drafts",
     "preview": "astro preview",
     "deploy": "tsx scripts/deploy-rclone.ts",
     "deploy:dry": "tsx scripts/deploy-rclone.ts --dry-run",

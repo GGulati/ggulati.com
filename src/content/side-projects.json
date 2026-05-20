@@ -6,7 +6,12 @@
     "website": "https://ggulati.github.io/RollThroughAges/",
     "source": "https://github.com/GGulati/RollThroughAges",
     "description": "A browser implementation of the dice-based civilization board game with a minimax AI, built in a weekend.",
-    "articles": []
+    "articles": [
+      {
+        "label": "Article",
+        "href": "/articles/2026/roll-through-the-ages.html"
+      }
+    ]
   },
   {
     "title": "Index Funds",

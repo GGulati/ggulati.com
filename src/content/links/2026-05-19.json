@@ -1,0 +1,50 @@
+{
+  "date": "2026-05-19",
+  "title": "Links for May 19, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48188183",
+          "title": "The last six months in LLMs in five minutes | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "Clearly focused on the benchmarks for agentic usecase over 1-shot terminal bench etc",
+      "links": [
+        {
+          "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/#frontier-intelligence",
+          "title": "Gemini 3.5: frontier intelligence with action"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48196570",
+          "title": "Gemini 3.5: frontier intelligence with action | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/",
+          "title": "CISA Admin Leaked AWS GovCloud Keys on Github"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48190454",
+          "title": "CISA Admin Leaked AWS GovCloud Keys on Github | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://nanransohoff.substack.com/p/the-third-wave-of-american-philanthropy",
+          "title": "The Third Wave of American Philanthropy"
+        }
+      ]
+    }
+  ]
+}

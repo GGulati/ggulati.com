@@ -26,6 +26,6 @@ export async function getFeedItems() {
     const dateDifference = b.date - a.date;
     if (dateDifference !== 0) return dateDifference;
     if (a.type === b.type) return 0;
-    return a.type === "links" ? -1 : 1;
+    return a.type === "article" ? -1 : 1;
   });
 }

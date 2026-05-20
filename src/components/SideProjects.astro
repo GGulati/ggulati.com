@@ -1,8 +1,10 @@
 ---
 import projects from "../content/side-projects.json";
+import { getArticles } from "../lib/articles.js";
 import { relativeUrl } from "../lib/urls.js";
 
 const { currentPath } = Astro.props;
+const visibleArticleUrls = new Set((await getArticles()).map((article) => article.url));
 ---
 
 <div class="demo-list">
@@ -15,7 +17,11 @@ const { currentPath } = Astro.props;
         <div>
           <a href={project.website}>Website</a>
           <a href={project.source}>Source</a>
-          {project.articles.map((article) => <a href={relativeUrl(currentPath, article.href)}>{article.label}</a>)}
+          {
+            project.articles
+              .filter((article) => visibleArticleUrls.has(article.href))
+              .map((article) => <a href={relativeUrl(currentPath, article.href)}>{article.label}</a>)
+          }
         </div>
       </article>
     ))

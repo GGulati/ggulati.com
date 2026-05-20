@@ -5,6 +5,8 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
+const includeDrafts = typeof process !== "undefined" && process.env.INCLUDE_DRAFTS === "true";
+
 function plainText(markdown) {
   return markdown
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
@@ -41,6 +43,7 @@ export async function getArticles() {
   });
 
   return Object.entries(modules)
+    .filter(([, module]) => includeDrafts || !module.frontmatter.draft)
     .map(([path, module]) => {
       const data = module.frontmatter;
       const slug = data.slug || path.split("/").pop().replace(/\.md$/, "");
