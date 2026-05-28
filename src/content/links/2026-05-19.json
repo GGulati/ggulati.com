@@ -12,7 +12,7 @@
       ]
     },
     {
-      "note": "Clearly focused on the benchmarks for agentic usecase over 1-shot terminal bench etc",
+      "note": "",
       "links": [
         {
           "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/#frontier-intelligence",
@@ -43,6 +43,15 @@
         {
           "href": "https://nanransohoff.substack.com/p/the-third-wave-of-american-philanthropy",
           "title": "The Third Wave of American Philanthropy"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://nanransohoff.substack.com/p/there-should-be-general-managers",
+          "title": "There Should Be General Managers"
         }
       ]
     }

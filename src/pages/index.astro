@@ -5,8 +5,9 @@ import SideProjects from "../components/SideProjects.astro";
 import { getFeedItems } from "../lib/feed.js";
 import { relativeUrl } from "../lib/urls.js";
 
-const feedItems = (await getFeedItems()).slice(0, 5);
+const feedItems = await getFeedItems();
 const currentPath = "/index.html";
+const recentCount = 5;
 ---
 
 <BaseLayout title="Gurwinder Gulati | Recent Posts">
@@ -17,8 +18,13 @@ const currentPath = "/index.html";
     </section>
 
     <section id="feed" class="section feed-section" aria-label="Articles and links">
-      <FeedList items={feedItems} currentPath={currentPath} />
-      <p class="feed-more-link"><a href={relativeUrl(currentPath, "/posts.html#post-6")}>More...</a></p>
+      <nav class="post-filter" aria-label="Post type filter">
+        <button type="button" data-home-post-filter="all">All</button>
+        <button type="button" data-home-post-filter="article">Articles</button>
+        <button type="button" data-home-post-filter="links">Links</button>
+      </nav>
+      <FeedList items={feedItems} currentPath={currentPath} hiddenFrom={recentCount} />
+      <p class="feed-more-link"><a href={relativeUrl(currentPath, "/posts.html#post-6")} data-home-more-link>More...</a></p>
     </section>
 
     <section id="side-projects" class="section side-projects-section" aria-labelledby="side-projects-heading">
@@ -59,4 +65,33 @@ const currentPath = "/index.html";
       </div>
     </section>
   </main>
+  <script is:inline>
+    const recentCount = 5;
+    const feedItems = Array.from(document.querySelectorAll("#feed .feed-item"));
+    const filterButtons = Array.from(document.querySelectorAll("[data-home-post-filter]"));
+    const moreLink = document.querySelector("[data-home-more-link]");
+
+    function applyHomeFilter(filter) {
+      const matchingItems = feedItems.filter((item) => filter === "all" || item.dataset.feedType === filter);
+
+      feedItems.forEach((item) => {
+        item.classList.toggle("feed-item-hidden", !matchingItems.slice(0, recentCount).includes(item));
+      });
+
+      filterButtons.forEach((button) => {
+        button.setAttribute("aria-current", button.dataset.homePostFilter === filter ? "page" : "false");
+      });
+
+      if (moreLink) {
+        const filterQuery = filter === "all" ? "" : `?type=${filter === "article" ? "articles" : "links"}`;
+        moreLink.href = `posts.html${filterQuery}#post-${recentCount + 1}`;
+      }
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => applyHomeFilter(button.dataset.homePostFilter));
+    });
+
+    applyHomeFilter("all");
+  </script>
 </BaseLayout>

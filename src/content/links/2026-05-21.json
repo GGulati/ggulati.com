@@ -1,0 +1,80 @@
+{
+  "date": "2026-05-21",
+  "title": "Links for May 21, 2026",
+  "groups": [
+    {
+      "note": "Related: residential proxy abuse makes scraper traffic harder to block.",
+      "links": [
+        {
+          "href": "https://weirdgloop.org/blog/clankers",
+          "title": "Aggressive AI scrapers are making it kinda suck to run wikis"
+        },
+        {
+          "href": "https://lobste.rs/s/k21pdb/aggressive_ai_scrapers_are_making_it",
+          "title": "Aggressive AI scrapers are making it kinda suck to run wikis | Lobsters"
+        },
+        {
+          "href": "https://cloud.google.com/blog/topics/threat-intelligence/disrupting-largest-residential-proxy-network",
+          "title": "No Place Like Home Network: Disrupting the World's Largest Residential Proxy Network"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
+          "title": "New Gemini-powered ad formats coming to Google Search"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48220105",
+          "title": "New Gemini-powered ad formats coming to Google Search | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://indevelopmentmag.substack.com/p/cheap-drugs-arent-enough-fixing-opioid",
+          "title": "India's Treatable Crisis: Why 7 Million Opioid Patients Go Without Care"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.hollywoodreporter.com/music/music-industry-news/spotify-will-start-reserving-concert-tickets-for-superfans-1236603106/",
+          "title": "Spotify Will Start Reserving Concert Tickets for Superfans"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48225357",
+          "title": "Spotify Will Start Reserving Concert Tickets for Superfans | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/",
+          "title": "Waymo pauses Atlanta service as its robotaxis keep driving into floods"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48225426",
+          "title": "Waymo pauses Atlanta service as its robotaxis keep driving into floods | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "Retraglutide is achieving bariatric-surgery-scale results",
+      "links": [
+        {
+          "href": "https://www.cnbc.com/2026/05/21/eli-lilly-weight-loss-drug-retatrutide-clears-obesity-trial.html",
+          "title": "Eli Lilly says new weight loss drug clears obesity trial"
+        }
+      ]
+    }
+  ]
+}

@@ -19,7 +19,10 @@ function linksDescription(item) {
   return item.groups
     .map((group) => {
       const links = group.links
-        .map((link) => `<li><a href="${link.href}">${link.title}</a></li>`)
+        .map((link) => {
+          const prefix = link.prefix ? `${escapeXml(link.prefix)} ` : "";
+          return `<li>${prefix}<a href="${link.href}">${link.title}</a></li>`;
+        })
         .join("");
       const note = group.note ? `<p>${group.note}</p>` : "";
       return `<div>${note}<ul>${links}</ul></div>`;

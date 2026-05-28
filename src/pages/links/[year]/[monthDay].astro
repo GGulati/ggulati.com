@@ -34,7 +34,12 @@ const currentPath = post.url;
           post.groups.map((group) => (
             <li>
               <div class="daily-link-group">
-                {group.links.map((link) => <a href={link.href}>"{link.title}"</a>)}
+                {group.links.map((link) => (
+                  <span class="daily-link-entry">
+                    {link.prefix && <span class="daily-link-prefix">{link.prefix}</span>}
+                    <a href={link.href}>"{link.title}"</a>
+                  </span>
+                ))}
               </div>
               {group.note && <p>{group.note}</p>}
             </li>

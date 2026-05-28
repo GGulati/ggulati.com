@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-20",
+  "title": "Links for May 20, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://ourworldindata.org/data-insights/tajikistans-remittances-are-worth-nearly-half-the-countrys-gdp",
+          "title": "Tajikistan's remittances are worth nearly half the country's GDP"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+          "title": "An OpenAI model has disproved a central conjecture in discrete geometry"
+        }
+      ]
+    }
+  ]
+}

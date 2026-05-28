@@ -1,0 +1,33 @@
+{
+  "date": "2026-05-24",
+  "title": "Links for May 24, 2026",
+  "groups": [
+    {
+      "note": "People are using this to turn 2d AI art to 3D to then use in game dev / animations. Both directly (3D game etc) and indirectly (3D model, rotated and posed in different ways to make a consistent 2D spritesheet, which is otherwise hard / requires LoRA etc)",
+      "links": [
+        {
+          "href": "https://www.tripo3d.ai/",
+          "title": "Tripo | Easy 2D to 3D: Free AI 3D Models From Images or Texts"
+        }
+      ]
+    },
+    {
+      "note": "His next finished series",
+      "links": [
+        {
+          "href": "https://acoup.blog/2026/05/22/collections-raising-carthaginian-armies-part-v-how-a-carthaginian-army-fights/",
+          "title": "Collections: Raising Carthaginian Armies, Part V: How a Carthaginian Army Fights"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48256953",
+          "title": "DeepSeek Reasonix, DeepSeek native coding agent with high caching and low cost | Hacker News"
+        }
+      ]
+    }
+  ]
+}

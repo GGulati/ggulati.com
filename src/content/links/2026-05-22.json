@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-22",
+  "title": "Links for May 22, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://modelrift.com/blog/openscad-llm-benchmark/",
+          "title": "OpenSCAD LLM Benchmark: Building the Pantheon"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48234090",
+          "title": "OpenSCAD LLM Benchmark: Building the Pantheon | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "Shreya is always excellent",
+      "links": [
+        {
+          "href": "https://www.sh-reya.com/blog/ai-qual-analysis/",
+          "title": "Exploring Agent-Assisted Qualitative Analysis"
+        }
+      ]
+    },
+    {
+      "note": "Pretty classic, it's why I got my new PC early last year (also pre-tariffs) and new phones earlier this year\n\nIn general suggest getting your long-lived consumer hardware now, b/c it will prob take 1-2y (or more) before prices drop meaningfully. And rn many manufacturers are still semi-subsidizing/not pricing in cost increases just yet due to manufacturing & stocking timelines (e.g. recent Switch price increases)",
+      "links": [
+        {
+          "href": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
+          "title": "AI is killing the cheap smartphone"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48229319",
+          "title": "AI is killing the cheap smartphone | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "comments better than article",
+      "links": [
+        {
+          "href": "https://davidoks.blog/p/why-japanese-companies-do-so-many",
+          "title": "Why Japanese companies do so many different things"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48237163",
+          "title": "Why Japanese companies do so many different things | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/research/glasswing-initial-update",
+          "title": "Project Glasswing: An initial update"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48240419",
+          "title": "Project Glasswing: An initial update | Hacker News"
+        }
+      ]
+    }
+  ]
+}

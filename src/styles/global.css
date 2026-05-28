@@ -418,9 +418,26 @@ h2 {
   text-decoration: none;
 }
 
+.post-filter button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .post-filter a[aria-current="page"],
+.post-filter button[aria-current="page"],
 .post-filter a:hover,
-.post-filter a:focus-visible {
+.post-filter button:hover,
+.post-filter a:focus-visible,
+.post-filter button:focus-visible {
   border-color: var(--accent);
   color: var(--ink);
 }
@@ -518,6 +535,16 @@ h2 {
 .daily-link-group {
   display: grid;
   gap: 6px;
+}
+
+.daily-link-entry {
+  display: block;
+}
+
+.daily-link-prefix {
+  color: var(--muted);
+  font-weight: 600;
+  margin-right: 0.25rem;
 }
 
 .daily-link-list p {

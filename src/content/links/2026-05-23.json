@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-23",
+  "title": "Links for May 23, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://horace.io/brrr_intro.html",
+          "title": "Making Deep Learning Go Brrrr From First Principles"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48246889",
+          "title": "Making Deep Learning Go Brrrr From First Principles | Hacker News"
+        },
+        {
+          "href": "https://www.youtube.com/watch?v=xmkSf5IS-zw",
+          "prefix": "Related:",
+          "title": "How GPT, Claude, and Gemini are actually trained and served - Reiner Pope"
+        },
+        {
+          "href": "https://flashcards.dwarkesh.com/",
+          "prefix": "Flashcards for the above:",
+          "title": "Dwarkesh Podcast Flashcards"
+        },
+        {
+          "href": "https://www.youtube.com/watch?v=139UPjoq7Kw",
+          "prefix": "Also related:",
+          "title": "Building Machine Learning Systems for a Trillion Trillion Floating Point Operations"
+        }
+      ]
+    },
+    {
+      "note": "By Knausgaard",
+      "links": [
+        {
+          "href": "https://granta.com/a-strange-birds-cry/",
+          "title": "A Strange Bird's Cry"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://nicholasdecker.substack.com/p/what-do-unions-do",
+          "title": "What Do Unions Do?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://americanaffairsjournal.org/2026/05/the-appreciation-constituency-land-credit-and-the-politics-of-protected-assets/",
+          "title": "The Appreciation Constituency: Land, Credit, and the Politics of Protected Assets"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://x.com/i/status/2058231818076242297",
+          "title": "Built my own thematic coding engine for @deuteroai"
+        }
+      ]
+    }
+  ]
+}

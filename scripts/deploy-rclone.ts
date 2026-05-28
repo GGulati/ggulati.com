@@ -76,6 +76,7 @@ const args = [
   mode,
   distDir,
   destination,
+  "--ignore-times",
   "--verbose",
   "--progress",
 ];
