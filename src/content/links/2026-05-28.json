@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-28",
+  "title": "Links for May 28, 2026",
+  "groups": [
+    {
+      "note": "Quality is the real challenge, not orchestration technical capability IMO",
+      "links": [
+        {
+          "href": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+          "title": "Introducing dynamic workflows in Claude Code"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48311705",
+          "title": "Introducing dynamic workflows in Claude Code | Hacker News"
+        }
+      ]
+    }
+  ]
+}

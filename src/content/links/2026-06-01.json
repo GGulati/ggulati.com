@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-01",
+  "title": "Links for June 1, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
+          "title": "The newest Instagram \"exploit\" is the goofiest I've seen"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48358646",
+          "title": "Anthropic confidentially submits draft S-1 to the SEC | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.thediff.co/archive/using-ai-for-writing-like-a-responsible-adult/",
+          "title": "Using AI for Writing like a Responsible Adult"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://30fps.net/pages/255-vs-256-division/",
+          "title": "Should you normalize RGB values by 255 or 256?"
+        }
+      ]
+    }
+  ]
+}

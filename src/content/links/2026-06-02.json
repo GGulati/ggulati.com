@@ -1,0 +1,90 @@
+{
+  "date": "2026-06-02",
+  "title": "Links for June 2, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.ggd.world/p/how-does-female-emancipation-affect",
+          "title": "How does Female Emancipation affect GDP?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.ph/DqPNZ",
+          "title": "Americans don't know how to fight AI. So they're fighting data centers."
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.washi.dev/posts/custom-attributes-and-why-they-suck/",
+          "title": "Why Custom Attributes in .NET give me Nightmares"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48343435",
+          "title": "Why Custom Attributes in .NET Give Me Nightmares | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://research.perplexity.ai/articles/rethinking-search-as-code-generation",
+          "title": "Rethinking Search as Code Generation"
+        },
+        {
+          "prefix": "Related:",
+          "href": "https://davistreybig.substack.com/p/how-agents-use-systems-differently",
+          "title": "How Agents Use Systems Differently",
+          "after": [
+            {
+              "prefix": "(",
+              "href": "/links/2026/05-14.html",
+              "title": "previously shared",
+              "suffix": ")"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://worksinprogress.co/issue/samurai-city/",
+          "title": "Samurai city"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://coveillance.org/a-walking-tour-of-surveillance-infrastructure-in-seattle/",
+          "title": "A walking tour of surveillance infrastructure in Seattle"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48369980",
+          "title": "A walking tour of surveillance infrastructure in Seattle (2020) | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.platformer.news/boris-cherny-interview-ai-jobs/",
+          "title": "Claude Code's creator on the end of the software engineer"
+        }
+      ]
+    }
+  ]
+}

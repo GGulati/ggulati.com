@@ -1,0 +1,54 @@
+{
+  "date": "2026-06-10",
+  "title": "Links for June 10, 2026",
+  "groups": [
+    {
+      "note": "Some of this philosophy is why my personal website is a simple static site (but ofc I can embed JS plugins so not entirely)",
+      "links": [
+        {
+          "href": "https://mohkohn.co.uk/writing/html-first/",
+          "title": "How building an HTML-first site doubled our users overnight"
+        },
+        {
+          "href": "https://lobste.rs/s/esvncd/how_building_html_first_site_doubled_our",
+          "title": "How building an HTML-first site doubled our users overnight | Lobsters"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48475483",
+          "title": "How building an HTML-first site doubled our users overnight | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
+          "title": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48470248",
+          "title": "Landmark German ruling declares Google's AI Overviews are Google's own words and makes it liable for false answers | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "p classic prompt injection",
+      "links": [
+        {
+          "href": "https://blue41.com/blog/how-we-helped-bunq-secure-their-financial-ai-assistant/",
+          "title": "How we helped Bunq secure their financial AI assistant"
+        }
+      ]
+    },
+    {
+      "note": "Jailbreaking LLM auto analysis by adding nuclear & bio weapons text, so it triggers LLM safety refusals",
+      "links": [
+        {
+          "href": "https://socket.dev/blog/mini-shai-hulud-miasma-and-hades-worms-target-bioinformatics-and-mcp-developers-via-malicious",
+          "title": "Mini Shai-Hulud, Miasma, and Hades Worms Target Bioinformatics and MCP Developers via Malicious PyPI Wheels"
+        }
+      ]
+    }
+  ]
+}

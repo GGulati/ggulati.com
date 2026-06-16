@@ -1,0 +1,45 @@
+{
+  "date": "2026-06-11",
+  "title": "Links for June 11, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48464140",
+          "title": "What it feels like to work with Mythos | Hacker News"
+        },
+        {
+          "href": "https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype",
+          "title": "Claude Fable 5: Mythos-grade hype, record cheating, and a few hall-of-fame entries"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48492210",
+          "title": "Claude Fable 5: mid-tier results on coding tasks | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "Roughly endorse the first couple sections; a prior manager I had also recommended having 20% slack [at work] - which can be used for reading, thinking, etc; and when it’s crunch time can ofc allocate that as needed\n\nLately I’ve been using my “20% time” at work to be putting out one side project or another, typically done by a Claude or two in the background of my main work. Not sure on the implications of that for having real slack time to think/process/etc in the background",
+      "links": [
+        {
+          "href": "https://www.seangoedecke.com/doing-nothing-at-work/",
+          "title": "Doing nothing at work"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48442880",
+          "title": "Doing nothing at work | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.janestreet.com/formal-methods-at-jane-street-index/",
+          "title": "Formal methods and the future of programming"
+        }
+      ]
+    }
+  ]
+}

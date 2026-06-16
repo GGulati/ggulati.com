@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-09",
+  "title": "Links for June 9, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://tratt.net/laurie/blog/2026/test_case_reducers_are_underappreciated_debugging_tools.html",
+          "title": "Test-case Reducers Are Underappreciated Debugging Tools"
+        },
+        {
+          "href": "https://lobste.rs/s/zwn4xe/test_case_reducers_are_underappreciated",
+          "title": "Test-case Reducers Are Underappreciated Debugging Tools | Lobsters"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
+          "title": "What it feels like to work with Mythos"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48464140",
+          "title": "What it feels like to work with Mythos | Hacker News"
+        }
+      ]
+    }
+  ]
+}

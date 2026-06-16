@@ -22,8 +22,19 @@ const links = defineCollection({
         note: z.string(),
         links: z.array(
           z.object({
+            prefix: z.string().optional(),
             href: z.string(),
             title: z.string(),
+            after: z
+              .array(
+                z.object({
+                  prefix: z.string().optional(),
+                  href: z.string(),
+                  title: z.string(),
+                  suffix: z.string().optional(),
+                }),
+              )
+              .optional(),
           }),
         ),
       }),

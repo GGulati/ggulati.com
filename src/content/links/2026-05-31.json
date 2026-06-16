@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-31",
+  "title": "Links for May 31, 2026",
+  "groups": [
+    {
+      "note": "Interesting interview with a well known name about the hedge fund industry, starting with an introductory 201-level explanation of what a quant is, what hedge funds do, etc. Recommended by a Citadel analyst",
+      "links": [
+        {
+          "href": "https://youtu.be/yxqTervPZe8?si=c7nR_DGyxTKdUsPG",
+          "title": "Giuseppe Paleologo - Multi-Manager Hedge Funds & Thinking Deeply About Simple Things (S7E11)"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
+          "title": "Meta officially launches Instagram, Facebook, and WhatsApp subscriptions"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48347354",
+          "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.lauramichet.com/what-its-like-to-have-the-machine-that-keeps-you-alive-die-while-youre-on-vacation/",
+          "title": "What it's like to have the machine that keeps you alive die while you're on vacation"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48313427",
+          "title": "Having your insulin pump die while you're on vacation | Hacker News"
+        }
+      ]
+    }
+  ]
+}

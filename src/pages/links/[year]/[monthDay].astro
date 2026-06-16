@@ -38,6 +38,16 @@ const currentPath = post.url;
                   <span class="daily-link-entry">
                     {link.prefix && <span class="daily-link-prefix">{link.prefix}</span>}
                     <a href={link.href}>"{link.title}"</a>
+                    {link.after?.map((afterLink) => (
+                      <>
+                        {" "}
+                        <span class="daily-link-annotation">
+                          {afterLink.prefix && <span>{afterLink.prefix}</span>}
+                          <a href={relativeUrl(currentPath, afterLink.href)}>{afterLink.title}</a>
+                          {afterLink.suffix && <span>{afterLink.suffix}</span>}
+                        </span>
+                      </>
+                    ))}
                   </span>
                 ))}
               </div>

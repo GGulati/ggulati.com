@@ -1,0 +1,104 @@
+{
+  "date": "2026-06-13",
+  "title": "Links for June 13, 2026",
+  "groups": [
+    {
+      "note": "Sarah Paine, more historical background here (vs just modern history)",
+      "links": [
+        {
+          "href": "https://youtu.be/OS1NZLgKM2c",
+          "title": "Sarah Paine - Why Putin and Xi can't escape geography"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://x.com/i/status/2065778604110184742",
+          "title": "Anton Leicht on the Fable ban"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/",
+          "title": "Has AI Already Killed How-To Nonfiction? Sales Trends, My Personal Data, and What It Might Mean for the Future"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://bycig.substack.com/p/the-economics-behind-the-spurs",
+          "title": "The economics behind the Spurs."
+        }
+      ]
+    },
+    {
+      "note": "Codex $100 is plenty for even dedicated hobbyist coding IME, but if you're doing a startup I would get double $200 subs (OpenAI + Anthropic) and go from there. Paying API rates for me at work is thousands per month spend.",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48518969",
+          "title": "AI coding at home without going broke | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/u0qdF",
+          "title": "How a Tiny British Island Fell Into an International Gambling Scandal"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://gwern.net/guardian-angel",
+          "title": "Guardian Angels: LLM Personalization for Productivity and Security"
+        }
+      ]
+    },
+    {
+      "note": "OpenRouter trying to standardize the common practice of blending expensive & cheap models. Also interesting is the \"Preventing Models From Cheating\" section, b/c it is a bit of tooling/tech to be able to run evals on models that can access eval-related data/solutions through general search (web, code search, or internal company search tools)",
+      "links": [
+        {
+          "href": "https://openrouter.ai/blog/announcements/fusion-beats-frontier/",
+          "title": "Surpassing Frontier Performance with Fusion"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://tonsky.me/blog/every-frame-perfect/",
+          "title": "Every Frame Perfect"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48516251",
+          "title": "Every Frame Perfect | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.fo/BIOej",
+          "title": "Police officer under criminal investigation over alleged use of AI"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48520807",
+          "title": "Police officer investigated for using AI to 'create evidence' in multiple cases | Hacker News"
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,14 @@ function linksDescription(item) {
       const links = group.links
         .map((link) => {
           const prefix = link.prefix ? `${escapeXml(link.prefix)} ` : "";
-          return `<li>${prefix}<a href="${link.href}">${link.title}</a></li>`;
+          const after = (link.after || [])
+            .map((afterLink) => {
+              const afterPrefix = afterLink.prefix ? escapeXml(afterLink.prefix) : "";
+              const afterSuffix = afterLink.suffix ? escapeXml(afterLink.suffix) : "";
+              return ` ${afterPrefix}<a href="${afterLink.href}">${escapeXml(afterLink.title)}</a>${afterSuffix}`;
+            })
+            .join("");
+          return `<li>${prefix}<a href="${link.href}">${escapeXml(link.title)}</a>${after}</li>`;
         })
         .join("");
       const note = group.note ? `<p>${group.note}</p>` : "";
