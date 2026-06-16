@@ -1,0 +1,41 @@
+{
+  "date": "2026-06-16",
+  "title": "Links for June 16, 2026",
+  "groups": [
+    {
+      "note": "It's a hard problem! In my side project I also use a consistent, game-local seeded RNG so runs/simulations/etc are all fully deterministic & repeatable. But leads to challenges like the above.",
+      "links": [
+        {
+          "href": "https://tck.mn/blog/correlated-randomness-sts2/",
+          "title": "Correlated randomness in Slay the Spire 2"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48552844",
+          "title": "Correlated randomness in Slay the Spire 2 | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48550779",
+          "title": "I admire Fabrice Bellard. He is almost certainly a better overall programmer | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://roman.pt/posts/linkedin-backdoor/",
+          "title": "A backdoor in a LinkedIn job offer"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48546294",
+          "title": "A backdoor in a LinkedIn job offer | Hacker News"
+        }
+      ]
+    }
+  ]
+}
