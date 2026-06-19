@@ -1,0 +1,55 @@
+{
+  "date": "2026-06-18",
+  "title": "Links for June 18, 2026",
+  "groups": [
+    {
+      "note": "tl;dr: good idea for those 50+ to get the shingles vaccine; also seems to have ~20% reduction in dementia diagnosis",
+      "links": [
+        {
+          "href": "https://erictopol.substack.com/p/spotlight-on-the-shingles-vaccineagain",
+          "title": "Spotlight on the Shingles Vaccine-Again!"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.midjourney.com/medical/blogpost",
+          "title": "Midjourney Medical"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48579650",
+          "title": "Midjourney Medical | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48580209",
+          "title": "Local Qwen isn't a worse Opus, it's a different tool | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch",
+          "title": "How we built a persistent agent memory layer on Elasticsearch with 0.89 recall and zero tenant leaks"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/securing-the-future-of-ai-agents/gdm-ai-control-roadmap.pdf",
+          "title": "Google DeepMind AI Control Roadmap"
+        }
+      ]
+    }
+  ]
+}
