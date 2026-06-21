@@ -1,0 +1,59 @@
+{
+  "date": "2026-06-21",
+  "title": "Links for June 21, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.dwarkesh.com/p/the-sample-efficiency-black-hole",
+          "title": "The data black hole at the center of AI"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://lobste.rs/s/d0vsgl/is_ai_ruining_our_skills_early_results_are",
+          "title": "Is AI ruining our skills? Early results are in and they're not good | Lobsters"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48618455",
+          "title": "Identity verification on Claude | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://fosterelli.co/developers-dont-understand-cors",
+          "title": "Developers don't understand CORS"
+        },
+        {
+          "href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS",
+          "title": "Cross-Origin Resource Sharing (CORS)"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48614844",
+          "title": "Developers don't understand CORS | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.persuasion.community/p/the-myth-of-authoritarian-efficiency",
+          "title": "The Myth of Authoritarian Efficiency"
+        }
+      ]
+    }
+  ]
+}
