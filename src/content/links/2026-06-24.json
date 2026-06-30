@@ -1,0 +1,107 @@
+{
+  "date": "2026-06-24",
+  "title": "Links for June 24, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://paolino.me/founding-a-company-in-germany/",
+          "title": "Founding a Company in Germany: EUR9,600, 152 Days, and I Still Can't Send an Invoice"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48658718",
+          "title": "Founding a company in Germany: EUR9600, 152 days and I still can't send an invoice | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://devblogs.microsoft.com/oldnewthing/20260622-00/?p=112451",
+          "title": "In memory of the man who put red and green squiggles under words"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48648959",
+          "title": "In memory of the man who put red and green squiggles under words | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.sciencenews.org/article/deadly-fungus-cats-people-spreading",
+          "title": "A deadly fungus that can infect cats and people is spreading"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48658186",
+          "title": "A deadly fungus that can infect cats and people is spreading | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48659451",
+          "title": "Slate EV truck starts at $24,950 | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://ben-mini.com/2026/stealing-is-a-skill",
+          "title": "Stealing is a Skill"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48659165",
+          "title": "Stealing Is a Skill | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.krea.ai/blog/krea-2-technical-report",
+          "title": "Krea 2 Technical Report"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48646659",
+          "title": "Krea 2: SOTA open-weights 12B image model | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "Recommended by a generative model researcher I know (see also: Karpathy's GPT2 youtube series)",
+      "links": [
+        {
+          "href": "https://cs336.stanford.edu/",
+          "title": "Stanford CS336 | Language Modeling from Scratch"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.nature.com/articles/s41467-024-45965-x",
+          "title": "TacticAI: an AI assistant for football tactics"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.deadcarl.com/p/the-death-of-conquest-and-the-costs",
+          "title": "The Death of Conquest and the Costs of Incompetence"
+        }
+      ]
+    }
+  ]
+}

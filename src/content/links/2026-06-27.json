@@ -1,0 +1,41 @@
+{
+  "date": "2026-06-27",
+  "title": "Links for June 27, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.weineng.me/posts/slowest_add/",
+          "title": "Data Access Patterns That Makes Your CPU Really Angry"
+        },
+        {
+          "href": "https://lobste.rs/s/xmsj3r/data_access_patterns_makes_your_cpu",
+          "title": "Data Access Patterns That Makes Your CPU Really Angry | Lobsters"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48696585",
+          "title": "DSpark: Speculative decoding accelerates LLM inference [pdf] | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://spectrum.ieee.org/ai-radio-chip-design",
+          "title": "AI Learns the Dark Art of RF Chip Design"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48660021",
+          "title": "AI learns the dark art of RFIC design | Hacker News"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-06-28",
+  "title": "Links for June 28, 2026",
+  "groups": [
+    {
+      "note": "Example of the pitfalls of vibecoded handbooks",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48696982",
+          "title": "Fintech Engineering Handbook | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/",
+          "title": "Cybersecurity in the post-mythos era: Keep calm and carry on!"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48698559",
+          "title": "Post-Mythos Cybersecurity: Keep calm and carry on | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.clinicaltrialsabundance.blog/p/why-were-covid-vaccine-trials-so-fast",
+          "title": "Why were Covid vaccine trials so fast?"
+        }
+      ]
+    }
+  ]
+}
