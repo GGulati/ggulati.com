@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-01",
+  "title": "Links for July 1, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://raiderking.com/inside-chinas-50-billion-gaming-market-and-the-piracy-loophole-threatening-foreign-developers-who-try-to-enter-it/",
+          "title": "Inside China's $50 Billion Gaming Market - And the Piracy Loophole Threatening Foreign Developers Who Try to Enter It"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://pradyuprasad.com/writings/how-to-ask-for-help/",
+          "title": "How to ask for help from people who don't know you"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.cloudflare.com/monetization-gateway/",
+          "title": "Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48746914",
+          "title": "Monetization Gateway: Charge for any resource behind Cloudflare via x402 | Hacker News"
+        }
+      ]
+    }
+  ]
+}

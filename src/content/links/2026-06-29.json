@@ -107,6 +107,15 @@
           "title": "It's Hard to Eval Is a Product Smell"
         }
       ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48709670",
+          "title": "GLM 5.2 beats Claude in our benchmarks | Hacker News"
+        }
+      ]
     }
   ]
 }
