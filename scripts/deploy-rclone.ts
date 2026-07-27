@@ -2,6 +2,11 @@ import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  type DeployMode,
+  fingerprintDestination,
+  runDeployment,
+} from "./deploy-rclone-lib.js";
 
 function loadEnv(path: string) {
   const values: Record<string, string> = {};
@@ -25,11 +30,42 @@ function argValue(name: string) {
   return index === -1 ? undefined : process.argv[index + 1];
 }
 
+function runRclone(args: string[], options: { input?: string } = {}) {
+  const result = spawnSync("rclone", args, {
+    cwd: projectRoot,
+    input: options.input,
+    encoding: options.input === undefined ? undefined : "utf8",
+    stdio: options.input === undefined ? "inherit" : ["pipe", "pipe", "pipe"],
+  });
+
+  if (result.error) throw result.error;
+  if (result.status !== 0) {
+    throw new Error(
+      typeof result.stderr === "string" && result.stderr.trim()
+        ? result.stderr.trim()
+        : `rclone exited with status ${result.status ?? 1}.`,
+    );
+  }
+
+  return typeof result.stdout === "string" ? result.stdout.trim() : "";
+}
+
+function obscurePassword(password: string) {
+  return runRclone(["obscure", "-"], { input: password });
+}
+
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(scriptDir, "..");
 const distDir = resolve(projectRoot, "dist");
+const manifestPath = resolve(
+  projectRoot,
+  ".deploy-cache",
+  "rclone-manifest.json",
+);
 const env = loadEnv(resolve(projectRoot, ".deploy.env"));
-const mode = argValue("--mode") || env.RCLONE_DEPLOY_MODE || "copy";
+const mode = (argValue("--mode") ||
+  env.RCLONE_DEPLOY_MODE ||
+  "incremental") as DeployMode;
 const dryRun = hasArg("--dry-run");
 const usingInlineFtp = env.RCLONE_REMOTE === ":ftp";
 const required = usingInlineFtp
@@ -41,47 +77,25 @@ if (missing.length) {
   throw new Error(`Missing deploy env values: ${missing.join(", ")}`);
 }
 
-if (!["copy", "sync"].includes(mode)) {
-  throw new Error(`Invalid deploy mode "${mode}". Use "copy" or "sync".`);
-}
-
-if (mode === "sync" && env.RCLONE_ALLOW_SYNC !== "true") {
-  throw new Error("Set RCLONE_ALLOW_SYNC=true in .deploy.env before using sync mode.");
+if (!["incremental", "sync"].includes(mode)) {
+  throw new Error(
+    `Invalid deploy mode "${mode}". Use "incremental" or "sync".`,
+  );
 }
 
 if (!existsSync(distDir) || !statSync(distDir).isDirectory()) {
   throw new Error("Missing Astro build output: run npm run build before deploying.");
 }
 
-function obscurePassword(password: string) {
-  const result = spawnSync("rclone", ["obscure", "-"], {
-    cwd: projectRoot,
-    input: password,
-    shell: true,
-    encoding: "utf8",
-  });
-
-  if (result.error) throw result.error;
-  if (result.status !== 0) {
-    throw new Error(result.stderr || "Unable to obscure FTP password with rclone.");
-  }
-
-  return result.stdout.trim();
-}
-
 const destination = usingInlineFtp
   ? `:ftp:${env.RCLONE_REMOTE_DIR}`
   : `${env.RCLONE_REMOTE}:${env.RCLONE_REMOTE_DIR}`;
-const args = [
-  mode,
-  distDir,
-  destination,
-  "--ignore-times",
-  "--verbose",
-  "--progress",
-];
-
-if (dryRun) args.push("--dry-run");
+const remoteArgs: string[] = [];
+const transferArgs: string[] = [];
+let destinationIdentity: Record<string, string | boolean> = {
+  remote: env.RCLONE_REMOTE,
+  directory: env.RCLONE_REMOTE_DIR,
+};
 
 if (usingInlineFtp) {
   const skipCertificateCheck =
@@ -91,7 +105,7 @@ if (usingInlineFtp) {
     ? env.FTP_HOST
     : env.FTP_TLS_SERVERNAME || env.FTP_HOST;
 
-  args.push(
+  remoteArgs.push(
     "--ftp-host",
     ftpHost,
     "--ftp-user",
@@ -100,20 +114,34 @@ if (usingInlineFtp) {
     obscurePassword(env.FTP_PASSWORD),
   );
 
-  if (env.FTP_SECURE === "true") args.push("--ftp-explicit-tls");
-  if (env.FTP_SECURE === "implicit") args.push("--ftp-tls");
-  if (skipCertificateCheck) args.push("--ftp-no-check-certificate");
-  args.push("--inplace");
+  if (env.FTP_SECURE === "true") remoteArgs.push("--ftp-explicit-tls");
+  if (env.FTP_SECURE === "implicit") remoteArgs.push("--ftp-tls");
+  if (skipCertificateCheck) remoteArgs.push("--ftp-no-check-certificate");
+  transferArgs.push("--inplace");
+
+  destinationIdentity = {
+    remote: ":ftp",
+    host: env.FTP_HOST,
+    directory: env.RCLONE_REMOTE_DIR,
+    secure: env.FTP_SECURE || "false",
+    tlsServerName: env.FTP_TLS_SERVERNAME || "",
+    skipCertificateCheck,
+  };
 }
 
-const result = spawnSync("rclone", args, {
-  cwd: projectRoot,
-  shell: true,
-  stdio: "inherit",
+runDeployment({
+  mode,
+  dryRun,
+  allowSync: env.RCLONE_ALLOW_SYNC === "true",
+  distDir,
+  manifestPath,
+  destination,
+  destinationFingerprint: fingerprintDestination(
+    JSON.stringify(destinationIdentity),
+  ),
+  remoteArgs,
+  transferArgs,
+  runRclone: (args) => {
+    runRclone(args);
+  },
 });
-
-if (result.error) {
-  throw result.error;
-}
-
-process.exit(result.status ?? 1);

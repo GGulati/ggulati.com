@@ -3,6 +3,7 @@ dist/
 .astro/
 .playwright/
 .deploy.env
+.deploy-cache/
 links/title-cache.json
 npm-debug.log*
 links.txt

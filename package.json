@@ -8,6 +8,7 @@
     "build": "tsx scripts/build.ts",
     "build:debug": "tsx scripts/build.ts --include-drafts",
     "preview": "astro preview",
+    "test:deploy": "node --import tsx --test scripts/deploy-rclone.test.ts",
     "deploy": "tsx scripts/deploy-rclone.ts",
     "deploy:dry": "tsx scripts/deploy-rclone.ts --dry-run",
     "deploy:sync": "tsx scripts/deploy-rclone.ts --mode sync",
