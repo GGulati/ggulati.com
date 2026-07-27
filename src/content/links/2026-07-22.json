@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-22",
+  "title": "Links for July 22, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
+          "title": "Judge approves a $1.5B Anthropic settlement over pirated books used to train the Claude chatbot"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.scientificamerican.com/article/sperm-whales-may-make-their-own-vowel-sounds-similar-to-human-language/",
+          "title": "Sperm whales may make their own vowel sounds, similar to human language"
+        },
+        {
+          "href": "https://www.theguardian.com/environment/2026/jul/22/sperm-whales-dominica-clicks-vowels-language-changes-shipping-noise-project-ceti",
+          "title": "Sperm whales change ‘vowel’ sounds when boats are nearby, scientists discover"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://hatchet.run/blog/postgres-survival-guide",
+          "title": "The startup's Postgres survival guide"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49005787",
+          "title": "The startup's Postgres survival guide | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/",
+          "title": "LG to Ban Residential Proxies from Smart TV Apps"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49000864",
+          "title": "LG to ban residential proxies from smart TV apps | Hacker News"
+        }
+      ]
+    }
+  ]
+}

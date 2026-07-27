@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-12",
+  "title": "Links for July 12, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.seangoedecke.com/pure-and-impure-engineering/",
+          "title": "Pure and impure software engineering"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=45165753",
+          "title": "Pure and Impure Software Engineering | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "100% endorse. I made a very simple interactive applet for the Membership 101 article.\n\nI also have been playing around with it for reviewing code at work, and of course for designing new features. Not quite there yet to work generically for visualizing any PR, but a good chance to get there with some effort over a week or two; and ofc model improvements in the next 6m will also help",
+      "links": [
+        {
+          "href": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+          "title": "Old and new apps, via modern coding agents"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48880170",
+          "title": "Old and new apps, via modern coding agents | Hacker News"
+        },
+        {
+          "href": "http://www.ggulati.com/articles/2026/membership-101.html",
+          "title": "Membership 101"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.austinvernon.site/blog/ukrainewar.html",
+          "title": "How Ukraine Built a War Fighting State"
+        }
+      ]
+    }
+  ]
+}

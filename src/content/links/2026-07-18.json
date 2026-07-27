@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-18",
+  "title": "Links for July 18, 2026",
+  "groups": [
+    {
+      "note": "Their citations are also high quality",
+      "links": [
+        {
+          "href": "https://www.cerebras.ai/blog/how-we-built-our-knowledge-base",
+          "title": "How We Built Our Knowledge Base"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/",
+          "title": "Stripe, Advent offer to buy PayPal for more than $53 billion, sources say"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48915953",
+          "title": "Stripe and Advent have made a joint offer to acquire PayPal – sources | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48957779",
+          "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization | Hacker News"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-07-23",
+  "title": "Links for July 23, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://github.com/marcelroed/gigatoken/",
+          "title": "GigaToken: Language model tokenization at GB/s"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49010167",
+          "title": "GigaToken: ~1000x faster Language model tokenization | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://mitchellh.com/writing/everyone-should-know-simd",
+          "title": "Everyone Should Know SIMD"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49010648",
+          "title": "Everyone should know SIMD | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://indevelopmentmag.substack.com/p/numbers-man-938",
+          "title": "Numbers Man"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.commonreader.co.uk/p/does-it-matter-if-you-dont-like-the",
+          "title": "Does it matter if you don't like the characters?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
+          "title": "What just happened to TheNumbers.com should worry us all"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49024691",
+          "title": "What happened to TheNumbers.com | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=49022038",
+          "title": "Software rendering in 500 lines of bare C++ | Hacker News"
+        }
+      ]
+    }
+  ]
+}

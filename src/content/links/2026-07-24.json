@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-24",
+  "title": "Links for July 24, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://platform.claude.com/cookbook/",
+          "title": "Claude Cookbook"
+        },
+        {
+          "href": "https://developers.openai.com/cookbook",
+          "title": "OpenAI Cookbook"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49031409",
+          "title": "Claude Cookbook | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://hhh.hn/hanwha-github-token/",
+          "title": "My security camera shipped a GitHub admin token in its login page"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49034292",
+          "title": "My security camera shipped a GitHub admin token in its login page | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=49033240",
+          "title": "IRGC claims it destroyed Amazon's Bahrain data center | Hacker News"
+        }
+      ]
+    }
+  ]
+}

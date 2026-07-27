@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-26",
+  "title": "Links for July 26, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+          "title": "Your site, your rules: new AI traffic options for all customers"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49052564",
+          "title": "Cloudflare's new AI traffic options for customers | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/",
+          "title": "London Gatwick introduces robotic parking service"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49058669",
+          "title": "London Gatwick has launched a robotic airport parking service | Hacker News"
+        }
+      ]
+    }
+  ]
+}

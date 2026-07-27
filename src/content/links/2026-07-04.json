@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-04",
+  "title": "Links for July 4, 2026",
+  "groups": [
+    {
+      "note": "Fable prompts - way more ambitious than my current side projects (with Codex)!",
+      "links": [
+        {
+          "href": "https://github.com/petergpt/3d-prompt-collection",
+          "title": "petergpt/3d-prompt-collection: A presentation-order collection of 3D prompts for copying and reuse."
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main",
+          "title": "ammaarreshi/Generals-Mac-iOS-iPad: Command & Conquer Generals: Zero Hour running natively on macOS, iPhone & iPad"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48788283",
+          "title": "Command & Conquer Generals: Zero Hour running natively on macOS, iPhone & iPad | Hacker News"
+        }
+      ]
+    }
+  ]
+}

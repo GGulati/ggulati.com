@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-03",
+  "title": "Links for July 3, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/udprt",
+          "title": "How Britain Became as Poor as Mississippi - The Atlantic"
+        }
+      ]
+    },
+    {
+      "note": "Related:",
+      "links": [
+        {
+          "href": "https://danluu.com/ai-coding/",
+          "title": "Agentic test processes, LLM benchmarks, and other notes on agentic coding from Galapagos Island"
+        },
+        {
+          "href": "https://danluu.com/testing/",
+          "title": "Given that we spend little effort on testing, how should we test software?"
+        }
+      ]
+    }
+  ]
+}

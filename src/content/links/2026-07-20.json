@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-20",
+  "title": "Links for July 20, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+          "title": "Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48975665",
+          "title": "I found a WordPress RCEs with GPT5.6 and $25 | Hacker News"
+        },
+        {
+          "href": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_prompt.pdf",
+          "title": "Prompt Used for “A Proof of the Cycle Double Cover Conjecture”"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://edri.org/our-work/the-eu-is-about-to-sell-our-most-sensitive-data-to-the-us-for-visa-free-travel/",
+          "title": "The EU is about to sell our most sensitive data to the US for visa-free travel"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48977711",
+          "title": "The EU is about to sell our most sensitive data to the US for visa-free travel | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=48968606",
+          "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
+          "title": "Xiaomi-Robotics-1"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48974454",
+          "title": "Xiaomi-Robotics-1 | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://news.risky.biz/risky-bulletin-hacker-wipes-romanias-entire-land-registry-database/",
+          "title": "Risky Bulletin: Hacker wipes Romania's entire land registry database"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48978605",
+          "title": "Hacker wipes Romania's land registry database | Hacker News"
+        }
+      ]
+    }
+  ]
+}
