@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-29",
+  "title": "Links for July 29, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+          "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49098466",
+          "title": "Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theargumentmag.com/p/americans-know-who-the-real-elite",
+          "title": "The elites aren't who you think they are"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive",
+          "title": "Why compute might get 10x more expensive in coming years"
+        }
+      ]
+    }
+  ]
+}

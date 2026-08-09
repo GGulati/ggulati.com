@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-05",
+  "title": "Links for August 5, 2026",
+  "groups": [
+    {
+      "note": "\"Dean, Sanjay Ghemawat, Oriol Vinyals and Quoc Le — some of Google's most famous and lauded AI and engineering leaders — left the company to launch a startup called Discovery Loop, which will focus on researching breakthroughs in machine learning, science and engineering. The startup is structured as a public benefit corporation.\"\n\nA huge deal for Google’s potential to be a top-few AI lab player",
+      "links": [
+        {
+          "href": "https://www.reuters.com/business/google-shakes-up-ai-leadership-deepmind-chief-shifts-role-2026-08-05/",
+          "title": "Google shakes up AI leadership as DeepMind chief shifts role"
+        },
+        {
+          "href": "https://www.discoveryloop.com/",
+          "title": "Discovery Loop — Continuous Exploration"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.404media.co/cops-used-flock-to-track-a-man-across-state-lines-to-create-pretext-to-search-his-car-for-weed/",
+          "title": "Cops Used Flock to Track a Man Across State Lines to Create Pretext to Search His Car for Weed"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://franciscotrindade.me/blog/the-kids-are-alright/",
+          "title": "The Kids Are Alright"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49182957",
+          "title": "Not hiring junior engineers won't solve the problem you think you have | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+          "title": "Pi, Minimal and Performant"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49176038",
+          "title": "Pi's Minimalism Is Its Advantage | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+          "title": "One-shotting a Raccoon Heist game using Claude Fable 5"
+        }
+      ]
+    },
+    {
+      "note": "Catan, Risk, and Poker against a range of agents",
+      "links": [
+        {
+          "href": "https://olamlabs.ai/",
+          "title": "Olam Labs — Multi-Agent Arena"
+        }
+      ]
+    },
+    {
+      "note": "Begun, the pricing wars have",
+      "links": [
+        {
+          "href": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+          "title": "Meta launches Muse Code, an AI agent for large code bases"
+        },
+        {
+          "href": "https://developer.meta.com/ai/products/meta-model-api/",
+          "title": "Meta Model API"
+        }
+      ]
+    }
+  ]
+}

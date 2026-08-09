@@ -1,5 +1,6 @@
 ---
 import { relativeUrl } from "../lib/urls.js";
+import { renderNoteMarkdown } from "../lib/note-markdown.js";
 
 const { items, currentPath, hiddenFrom = Infinity } = Astro.props;
 ---
@@ -27,7 +28,7 @@ const { items, currentPath, hiddenFrom = Infinity } = Astro.props;
           <ol class="daily-link-list">
             {
               item.groups.map((group) => (
-                <li>
+                <li id={group.id}>
                   <div class="daily-link-group">
                     {group.links.map((link) => (
                       <span class="daily-link-entry">
@@ -46,7 +47,7 @@ const { items, currentPath, hiddenFrom = Infinity } = Astro.props;
                       </span>
                     ))}
                   </div>
-                  {group.note && <p>{group.note}</p>}
+                  {group.note && <div class="daily-link-note" set:html={renderNoteMarkdown(group.note)} />}
                 </li>
               ))
             }

@@ -547,10 +547,21 @@ h2 {
   margin-right: 0.25rem;
 }
 
-.daily-link-list p {
+.daily-link-note {
   margin: 8px 0 0;
   color: var(--muted);
-  white-space: pre-line;
+}
+
+.daily-link-note > :first-child {
+  margin-top: 0;
+}
+
+.daily-link-note > :last-child {
+  margin-bottom: 0;
+}
+
+.daily-link-note p {
+  margin: 0 0 1em;
 }
 
 .load-sentinel {

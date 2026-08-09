@@ -1,0 +1,59 @@
+{
+  "date": "2026-08-08",
+  "title": "Links for August 8, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.derekthompson.org/p/the-9-questions-im-obsessed-with",
+          "title": "The 9 Questions I’m Obsessed With Right Now: AI, Politics, Movies, Drugs, and Western Civilization"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.computerenhance.com/p/clean-code-horrible-performance",
+          "title": "\"Clean\" Code, Horrible Performance"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+          "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49220609",
+          "title": "Timeline of the OpenAI accidental attack against Hugging Face | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+          "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49220126",
+          "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/sqDrl",
+          "title": "To Understand the US Economy, Just Board an Airplane"
+        }
+      ]
+    }
+  ]
+}

@@ -17,5 +17,7 @@ function run(command: string, args: string[]) {
   if (result.status !== 0) process.exit(result.status ?? 1);
 }
 
+run("tsx", ["scripts/validate-link-notes.ts"]);
 run("astro", ["build"]);
 run("tsx", ["scripts/fix-dist-paths.ts"]);
+run("tsx", ["scripts/validate-link-notes.ts", "--dist"]);

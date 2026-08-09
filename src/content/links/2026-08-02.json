@@ -1,0 +1,51 @@
+{
+  "date": "2026-08-02",
+  "title": "Links for August 2, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.bytebytego.com/p/why-doordash-instacart-and-uber-eats",
+          "title": "Why DoorDash, Instacart, and Uber Eats Integrated LLMs Into Search Three Different Ways"
+        }
+      ]
+    },
+    {
+      "note": "Terence Tao AI talk slides:",
+      "links": [
+        {
+          "href": "https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf",
+          "title": "Mathematics in the age of AI"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/NIw0Z",
+          "title": "The Rise of Million-Dollar Companies With Just One Employee"
+        }
+      ]
+    },
+    {
+      "note": "I was thinking of writing a blog article on this, but there are people talking about one-shot \"uber prompts\" to create simulations/demos/games (see also: r/aigamedev). I tried it out myself over ~10h of autonomous Codex, and it does an incredible job of a lot of features at very low quality. Very impressive in a way, but also extremely funny how much throwaway work it does (because it auto-critics itself constantly, it often redoes a lot of work, especially on graphics).",
+      "links": [
+        {
+          "href": "https://news.ycombinator.com/item?id=49140998",
+          "title": "Karpathy’s Pelican | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://youtu.be/wa4I8Ch2TRo",
+          "title": "Christopher Nolan talks narrative decisions, film critics and whether he Christianised The Odyssey"
+        }
+      ]
+    }
+  ]
+}

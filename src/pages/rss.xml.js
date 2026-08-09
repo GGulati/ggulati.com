@@ -1,4 +1,5 @@
 import { getFeedItems } from "../lib/feed.js";
+import { renderNoteMarkdown } from "../lib/note-markdown.js";
 
 const fallbackSite = "https://ggulati.com";
 
@@ -15,7 +16,11 @@ function absoluteUrl(path, site) {
   return new URL(path.replace(/^\//, ""), `${site}/`).toString();
 }
 
-function linksDescription(item) {
+function linkUrl(href, site) {
+  return href.startsWith("/") ? absoluteUrl(href, site) : href;
+}
+
+function linksDescription(item, site) {
   return item.groups
     .map((group) => {
       const links = group.links
@@ -25,13 +30,15 @@ function linksDescription(item) {
             .map((afterLink) => {
               const afterPrefix = afterLink.prefix ? escapeXml(afterLink.prefix) : "";
               const afterSuffix = afterLink.suffix ? escapeXml(afterLink.suffix) : "";
-              return ` ${afterPrefix}<a href="${afterLink.href}">${escapeXml(afterLink.title)}</a>${afterSuffix}`;
+              return ` ${afterPrefix}<a href="${linkUrl(afterLink.href, site)}">${escapeXml(afterLink.title)}</a>${afterSuffix}`;
             })
             .join("");
-          return `<li>${prefix}<a href="${link.href}">${escapeXml(link.title)}</a>${after}</li>`;
+          return `<li>${prefix}<a href="${linkUrl(link.href, site)}">${escapeXml(link.title)}</a>${after}</li>`;
         })
         .join("");
-      const note = group.note ? `<p>${group.note}</p>` : "";
+      const note = group.note
+        ? renderNoteMarkdown(group.note, { resolveHref: (href) => linkUrl(href, site) })
+        : "";
       return `<div>${note}<ul>${links}</ul></div>`;
     })
     .join("");
@@ -45,7 +52,7 @@ export async function GET({ site }) {
       const url = absoluteUrl(item.url, siteUrl);
       const description = item.type === "article"
         ? escapeXml(item.excerpt)
-        : escapeXml(linksDescription(item));
+        : escapeXml(linksDescription(item, siteUrl));
 
       return `
     <item>

@@ -1,0 +1,253 @@
+{
+  "date": "2026-07-28",
+  "title": "Links for July 28, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://marginalrevolution.com/marginalrevolution/2026/07/the-apples-and-oranges-tribunal.html",
+          "title": "The Apples and Oranges Tribunal"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://spawn-queue.acm.org/doi/10.1145/3819083",
+          "title": "Beyond Zero: Enterprise security for the AI era"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49081644",
+          "title": "Google's Beyond Zero: Enterprise Security for the AI Era | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://fermisense.com/when-machines-take-the-wheel/",
+          "title": "The Rise of Intelligence Ownership"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49078454",
+          "title": "A $500 RL fine-tune of a 9B open model beat frontier models on catalog review | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://coreweave.com/blog/nvidia-vera-rubin-nvl72-on-coreweave-10x-more-tokens-per-megawatt-than-blackwell",
+          "title": "NVIDIA Vera Rubin NVL72 on CoreWeave: 10x More Tokens Per Megawatt Than Blackwell"
+        }
+      ]
+    },
+    {
+      "note": "\"Investors will re-price Shein away from a pure hyper-growth tech platform toward a physical retail and logistics player navigating high-friction global trade.\"",
+      "links": [
+        {
+          "href": "https://www.reuters.com/legal/transactional/shein-will-struggle-justify-40-50-billion-hong-kong-ipo-valuation-2026-07-27/",
+          "title": "Shein will struggle to justify up to $50 billion Hong Kong IPO valuation"
+        }
+      ]
+    },
+    {
+      "note": "\"Google is learning the lesson Apple learned the hard way with all the existing features of iOS that were deemed noncompliant with the DMA when it went into effect. The “ship it first and ask forgiveness / hope it’s deemed compliant” strategy is not a good one in the EU.\"",
+      "links": [
+        {
+          "href": "https://daringfireball.net/2026/07/ec_google_guidance_android_ai_and_search_sharing",
+          "title": "European Commission: ‘Guidance to Google for AI Interoperability on Android & Sharing of Google Search’"
+        },
+        {
+          "prefix": "Google’s response:",
+          "href": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/",
+          "title": "The DMA should not undercut security & privacy for Europeans"
+        },
+        {
+          "prefix": "Related:",
+          "href": "https://www.reuters.com/sustainability/boards-policy-regulation/apple-criticises-eu-measures-help-ai-rivals-access-google-services-2026-05-13/",
+          "title": "Apple criticises EU measures to help AI rivals access Google services"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/",
+          "title": "Exploring Hierarchical Interest Representation for Meta Ads Deep Funnel Optimization"
+        }
+      ]
+    },
+    {
+      "note": "More agreement this is a marathon, not a sprint!\n\n\"He believes China has built-in advantages in cost and user experience, since American companies have no strong reason to push costs to the very limit. He pictures a future where competition looks like that in other manufacturing fields: China will play the role of offering cheaper services in a systematic way. At the same time, he thinks Nvidia’s CUDA ecosystem wall is being broken down by new technology, and that building a new ecosystem for Chinese chips is a historic chance. Once the limit on how many chips can be made is overcome, the gap in basic computing power between China and the US will go away.\"",
+      "links": [
+        {
+          "href": "https://www.fredgao.com/p/deepseeks-liang-wenfeng-breaks-his",
+          "title": "DeepSeek's Liang Wenfeng Breaks His Silence"
+        }
+      ]
+    },
+    {
+      "note": "note: no Semianalysis article on this yet, they have good deep dives (but paywalled)",
+      "links": [
+        {
+          "href": "https://www.tomshardware.com/tech-industry/semiconductors/china-begins-mass-production-of-domestic-immersion-duv-lithography-machines",
+          "title": "China begins mass production of homegrown immersion chipmaking machines in major breakthrough, report claims"
+        },
+        {
+          "prefix": "See also this recent news (with salt):",
+          "href": "https://www.cnbc.com/2026/07/28/china-chipmaking-duv-tool-asml-explained.html",
+          "title": "China’s reported chip breakthrough comes with some big caveats"
+        }
+      ]
+    },
+    {
+      "note": "ofc related, but more on the model side\n\n\"The strategy for China is obvious: commoditize your complements. Note that Xi explicitly ties openness to AI “moving from the digital world into the physical world”; the physical world is the world dominated by China, and the country’s lead in areas like robotics is going to massively benefit from widely available AI models.\n\nAlong the same lines, China does not want the U.S. to gain an asymmetric advantage in AI; to the extent that China can weaken the U.S. frontier labs while strengthening any and all potential U.S. adversaries so much the better, and it can benefit from the innovation that will attach itself to an open ecosystem.\"",
+      "links": [
+        {
+          "href": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
+          "title": "Who’s Afraid of Chinese Models?"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=48977128",
+          "title": "Who’s Afraid of Chinese Models? | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/o1nMD",
+          "title": "Google Was a Lifeline for Publishers. Now Some Are Thinking of Cutting It Off."
+        }
+      ]
+    },
+    {
+      "note": "related: Cloudflare’s plan to block Google’s crawler by default Sept 15 onwards\n\n\"Another change that will apply on September 15 is that multi-purpose crawlers (specifically those that combine Search with Training) will be allowed/blocked according to all of their behaviors, in line with our call for transparency for website owners. Since the defaults will be enforced by the most restrictive applicable rules, multi-purpose crawlers such as Googlebot, Applebot, and BingBot will be blocked by customers who have selected to block Training (either through the new options to manage AI traffic, or through the legacy Block AI bots service).\"",
+      "links": [
+        {
+          "prefix": "Previously shared July 26:",
+          "href": "/links/2026/07-26.html#cloudflare-ai-traffic-options",
+          "title": "Your site, your rules: new AI traffic options for all customers"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.bloomberg.com/graphics/2026-usaid-water-projects-trump-cuts/",
+          "title": "Hidden Cost of Trump's USAID Cuts: Floods, Disease and Poverty"
+        }
+      ]
+    },
+    {
+      "note": "overall, I see this as an indication that the games industry perceives itself & AI usage etc similar to how artists do (be it audio art, visual art, video, multimedia, etc across genres - hence also including interactive art [games])",
+      "links": [
+        {
+          "href": "https://www.gamesindustry.biz/nearly-nine-in-ten-games-industry-workers-believe-genai-use-should-be-disclosed-on-storefronts",
+          "title": "Nearly nine in ten games industry workers believe GenAI use should be disclosed on storefronts"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/",
+          "title": "AI Mania Is Eviscerating Global Decision-Making"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+          "title": "Discovering cryptographic weaknesses with Claude"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49087091",
+          "title": "Discovering Cryptographic Weaknesses with Claude | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/",
+          "title": "Substack writers, you need a website!"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49086788",
+          "title": "Substack writers, you need a website | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://mlugg.co.uk/posts/incremental-compilation-internals/",
+          "title": "Inside Zig's Incremental Compilation"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49085666",
+          "title": "Zig's Incremental Compilation Internals | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://newsletter.pragmaticengineer.com/p/inside-anthropic",
+          "title": "How building software is changing at Anthropic"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theargumentmag.com/p/in-defense-of-gerontocracy",
+          "title": "In defense of gerontocracy"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://alifeengineered.substack.com/p/the-art-of-dealing-with-ambiguity-89d",
+          "title": "The Art of Dealing with Ambiguity"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.anthropic.com/engineering/managed-agents",
+          "title": "Scaling Managed Agents: Decoupling the brain from the hands"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://openai.com/index/beyond-rate-limits/",
+          "title": "Beyond rate limits: scaling access to Codex and Sora"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "date": "2026-08-09",
+  "title": "Links for August 9, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.nytimes.com/wirecutter/reviews/talenti-investigation/",
+          "title": "What Happened to Talenti?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://archive.is/j81he",
+          "title": "Chinas A.I. Is Surging Across Africa. That Should Worry Silicon Valley."
+        }
+      ]
+    },
+    {
+      "note": "Painful to read LLM slop unfortunately, even if the core ideas might be worthwhile\n\nThey were inspired by [Solid Queue](https://dev.37signals.com/introducing-solid-queue/) which is much more readable",
+      "links": [
+        {
+          "href": "https://shopify.engineering/scaling-inventory-reservations",
+          "title": "We replaced Redis with MySQL for inventory reservations—and it scaled"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49226536",
+          "title": "We replaced Redis with MySQL for inventory reservations and it scaled | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+          "title": "Fastmail offers EU data region"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49223082",
+          "title": "Fastmail offers EU data region | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "I read so much of Amit when I was in HS learning 2D game programming; great to see he's still creating tutorials & lessons. His demos are great interactive ways to learn,  and an inspiration for how much I love interactive applets/demos for teaching (see [Membership 101](/links/2026/07-12.html#membership-101-applet)) & understanding (at work, I turned our huge set of data science dashboards/graphs into an interactive globe a la [Stripe](https://stripe.com/blog/globe), where you can click around to visualize fraud, payment success, different payment method usage, etc)\n\nAt the time, the cutting edge of pathfinding algos (that I knew of, between game programming & robotics) were D*, D* Lite, and symmetry-breaking D*: [Dstar Lite: An Optimal Algorithm for Robotics Pathfinding](https://nhsjs.com/2020/dstar-lite-an-optimal-algorithm-for-robotics-pathfinding/)\n\nAlso navmeshes (simplifying the map into a handful of graph nodes, rather than a large number of tiles), hierarchical planners, partial refinement A* - useful for dynamic games, where otherwise much of pathfinding would have to be thrown away or recompute; and for frame budgets, where you can do partial computation for many units efficiently. RTS games (e.g. AoE 2) had other complexities, trying to pathfind for groups but have to handle units bumping into each other or for example small chokepoints along the efficient route (imagine 25 units have to cross a 2-unit-wide river crossing - is that still the most efficient route? and/or how do you get them to not get stuck - consider the usual techniques like sliding collisions)\n\nThat was actually the subject for my very first blog article back on Wordpress in 2011, on flocking algorithms & boids for cheap a-life / simulations of many units! [Boidwatching](http://www.ggulati.com/articles/2011/boidwatching.html)",
+      "links": [
+        {
+          "href": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
+          "title": "Improving Heuristics"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49079995",
+          "title": "Improving Heuristics for A* Pathfinding | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://digitalseams.com/blog/making-things-interview-series",
+          "title": "Making things: interview series"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://blog.runevision.com/2026/03/fast-and-gorgeous-erosion-filter.html",
+          "title": "Fast and Gorgeous Erosion Filter"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://digitalseams.com/blog/image-transcription-humbled-me",
+          "title": "Image transcription humbled me"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
+          "title": "There Are Magic Hexagons of Every Order"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49229174",
+          "title": "There Are Magic Hexagons of Every Order | Hacker News"
+        }
+      ]
+    }
+  ]
+}

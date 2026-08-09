@@ -16,6 +16,7 @@
       ]
     },
     {
+      "id": "membership-101-applet",
       "note": "100% endorse. I made a very simple interactive applet for the Membership 101 article.\n\nI also have been playing around with it for reviewing code at work, and of course for designing new features. Not quite there yet to work generically for visualizing any PR, but a good chance to get there with some effort over a week or two; and ofc model improvements in the next 6m will also help",
       "links": [
         {
