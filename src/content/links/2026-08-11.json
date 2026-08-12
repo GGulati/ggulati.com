@@ -1,0 +1,80 @@
+{
+  "date": "2026-08-11",
+  "title": "Links for August 11, 2026",
+  "groups": [
+    {
+      "note": "Related: [Traditional versus resilience engineering views](https://surfingcomplexity.blog/2026/08/02/traditional-versus-resilience-engineering-views/)",
+      "links": [
+        {
+          "href": "https://typesanitizer.com/blog/code-review.html",
+          "title": "Reviewing code is a skill"
+        },
+        {
+          "href": "https://lobste.rs/s/gyxkma/reviewing_code_is_skill",
+          "title": "Reviewing code is a skill | Lobsters"
+        }
+      ]
+    },
+    {
+      "note": "aka GEPA on agent workflow design on RSI\n\nmore of a literature review tbh",
+      "links": [
+        {
+          "href": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+          "title": "Harness Engineering for Self-Improvement"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
+          "title": "France to ban unsolicited telemarketing calls from August 11"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49254880",
+          "title": "France to ban unsolicited telemarketing calls | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+          "title": "How Claude marks AI-generated content"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49250109",
+          "title": "How Claude marks AI-generated content | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+          "title": "The \"mechanical miracle\" that ruined Mark Twain's life"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49184220",
+          "title": "The “mechanical miracle” that ruined Mark Twain’s life | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://danluu.com/pl-tokens/",
+          "title": "What's the best programming language for coding agents?"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49245936",
+          "title": "What's the best programming language for coding agents? | Hacker News"
+        }
+      ]
+    }
+  ]
+}
