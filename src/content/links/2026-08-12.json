@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-12",
+  "title": "Links for August 12, 2026",
+  "groups": [
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://conorsen.substack.com/p/the-housing-recession-is-over-8b6",
+          "title": "The Housing Recession is Over"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://www.theatlantic.com/ideas/2026/08/fertility-men-housework-goldin/688238/?gift=SDxDLe7vqwTbgOhZBtU9KmgjBsFDmt4IBliTgxEwR_0",
+          "title": "Are Men to Blame for the Birth-Rate Collapse?"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
+          "title": "What sort of maths are LLMs good at?"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49270022",
+          "title": "What sort of maths are LLMs good at? | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://conversationswithtyler.com/episodes/daron-acemoglu-2/",
+          "title": "Daron Acemoglu on Liberalism, Automation, and the Educated Elite (Ep. 286)"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+          "title": "How we tracked down a 16-year-old SQLite bug"
+        },
+        {
+          "href": "https://news.ycombinator.com/item?id=49272832",
+          "title": "Tracking down the 16-year-old WAL-reset SQLite bug | Hacker News"
+        }
+      ]
+    },
+    {
+      "note": "",
+      "links": [
+        {
+          "href": "https://hamel.dev/notes/llm/ai-product-engineering/",
+          "title": "AI Product Engineering Notes"
+        }
+      ]
+    }
+  ]
+}
